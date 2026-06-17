@@ -8,6 +8,15 @@ import type {
   Event,
   Faq,
   Homepage,
+  LegalAccessibleEnvironment,
+  LegalBasicInfo,
+  LegalFinance,
+  LegalInternational,
+  LegalMtb,
+  LegalPaidService,
+  LegalScholarship,
+  LegalStandard,
+  LegalStructure,
   News,
   Page,
   PageContent,
@@ -342,9 +351,21 @@ export async function getVacancies(programId?: string, year?: string): Promise<V
   return result.docs
 }
 
-export async function getLegalGlobal(slug: LegalGlobalSlug) {
+type LegalGlobalMap = {
+  'legal-basic-info': LegalBasicInfo
+  'legal-structure': LegalStructure
+  'legal-mtb': LegalMtb
+  'legal-accessible-environment': LegalAccessibleEnvironment
+  'legal-international': LegalInternational
+  'legal-scholarships': LegalScholarship
+  'legal-paid-services': LegalPaidService
+  'legal-finance': LegalFinance
+  'legal-standards': LegalStandard
+}
+
+export async function getLegalGlobal<S extends LegalGlobalSlug>(slug: S): Promise<LegalGlobalMap[S]> {
   const payload = await getPayloadClient()
-  return payload.findGlobal({ slug, depth: 2 })
+  return payload.findGlobal({ slug, depth: 2 }) as Promise<LegalGlobalMap[S]>
 }
 
 export async function getProgramsForLegal(): Promise<Program[]> {

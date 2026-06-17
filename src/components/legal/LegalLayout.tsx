@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 
 import { Container } from '@/components/layout/Container'
 import { LegalSidebar } from '@/components/legal/LegalSidebar'
+import { INFO_BASE } from '@/lib/constants'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -27,7 +28,7 @@ export function LegalLayout({ title, children, breadcrumbs = [] }: LegalLayoutPr
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="/svedeniya">Сведения об организации</BreadcrumbLink>
+            <BreadcrumbLink href={INFO_BASE}>Сведения об организации</BreadcrumbLink>
           </BreadcrumbItem>
           {breadcrumbs.map((crumb) => (
             <span key={crumb.label} className="contents">

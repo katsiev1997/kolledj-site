@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { DOCUMENT_CATEGORY_LABELS } from '@/lib/constants'
 import { getMediaUrl } from '@/lib/payload/media'
 import type { Document } from '@/payload-types'
 
@@ -34,7 +35,9 @@ export function DocumentList({ documents, groupByCategory = false }: DocumentLis
     <div className="flex flex-col gap-8">
       {Object.entries(grouped).map(([category, items]) => (
         <section key={category} className="flex flex-col gap-4">
-          <h2 className="text-xl font-medium text-foreground">{category}</h2>
+          <h2 className="text-xl font-medium text-foreground">
+            {DOCUMENT_CATEGORY_LABELS[category] || category}
+          </h2>
           <div className="flex flex-col gap-4">
             {items.map((doc) => (
               <DocumentCard key={doc.id} document={doc} />

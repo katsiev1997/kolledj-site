@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { LEGAL_NAV } from '@/lib/constants'
+import { INFO_BASE, LEGAL_NAV } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
 export function LegalSidebar() {
@@ -12,10 +12,10 @@ export function LegalSidebar() {
   return (
     <nav aria-label="Сведения об образовательной организации" className="flex flex-col gap-1">
       <Link
-        href="/svedeniya"
+        href={INFO_BASE}
         className={cn(
           'rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted',
-          pathname === '/svedeniya' ? 'bg-muted font-medium text-foreground' : 'text-muted-foreground',
+          pathname === INFO_BASE ? 'bg-muted font-medium text-foreground' : 'text-muted-foreground',
         )}
       >
         Оглавление

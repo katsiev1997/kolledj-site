@@ -4,6 +4,7 @@ import { Container } from '@/components/layout/Container'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { INFO_BASE } from '@/lib/constants'
 import { getMediaUrl } from '@/lib/payload/media'
 import type { Document } from '@/payload-types'
 
@@ -54,7 +55,7 @@ export function LicensesTeaser({
           })}
         </div>
         <Button asChild variant="outline" className="w-fit">
-          <Link href="/svedeniya/documents">{actionLabel}</Link>
+          <Link href={`${INFO_BASE}/documents`}>{actionLabel}</Link>
         </Button>
       </Container>
     </section>

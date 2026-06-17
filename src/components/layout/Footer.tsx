@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/layout/Container'
 import { Separator } from '@/components/ui/separator'
-import { LEGAL_NAV, MAIN_NAV } from '@/lib/constants'
+import { INFO_BASE, LEGAL_NAV, MAIN_NAV } from '@/lib/constants'
 import type { SiteSetting } from '@/payload-types'
 
 type FooterProps = {
@@ -52,7 +52,7 @@ export function Footer({ settings }: FooterProps) {
           <div className="flex flex-col gap-3">
             <p className="text-sm font-medium text-foreground">Сведения об организации</p>
             <nav className="flex flex-col gap-2" aria-label="Сведения об организации">
-              <Link href="/svedeniya" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link href={INFO_BASE} className="text-sm text-muted-foreground hover:text-foreground">
                 Образовательная организация
               </Link>
               {LEGAL_NAV.slice(0, 6).map((item) => (

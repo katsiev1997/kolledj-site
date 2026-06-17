@@ -1,6 +1,8 @@
 import type { CollectionAfterChangeHook, GlobalAfterChangeHook } from 'payload'
 import { revalidatePath } from 'next/cache'
 
+import { INFO_BASE } from '@/lib/constants'
+
 function safeRevalidatePath(path: string, type?: 'layout' | 'page') {
   try {
     revalidatePath(path, type)
@@ -20,7 +22,7 @@ export const revalidateFrontendCollection: CollectionAfterChangeHook = ({ doc, c
 
   switch (collection.slug) {
     case 'programs':
-      revalidatePaths(['/', '/programs', ...(slug ? [`/programs/${slug}`] : []), '/svedeniya/education'])
+      revalidatePaths(['/', '/programs', ...(slug ? [`/programs/${slug}`] : []), `${INFO_BASE}/education`])
       break
     case 'news':
       revalidatePaths(['/', '/news', ...(slug ? [`/news/${slug}`] : [])])
@@ -38,16 +40,16 @@ export const revalidateFrontendCollection: CollectionAfterChangeHook = ({ doc, c
       revalidatePaths(['/partners'])
       break
     case 'campuses':
-      revalidatePaths(['/contacts'])
+      revalidatePaths(['/contacts', `${INFO_BASE}/basic`])
       break
     case 'documents':
-      revalidatePaths(['/', '/svedeniya/documents'])
+      revalidatePaths(['/', `${INFO_BASE}/documents`])
       break
     case 'staff':
-      revalidatePaths(['/svedeniya/structure', '/svedeniya/staff'])
+      revalidatePaths([`${INFO_BASE}/structure`, `${INFO_BASE}/staff`])
       break
     case 'vacancies':
-      revalidatePaths(['/svedeniya/vacancies', '/svedeniya/education'])
+      revalidatePaths([`${INFO_BASE}/vacancies`, `${INFO_BASE}/education`])
       break
     default:
       break
@@ -68,34 +70,34 @@ export const revalidateFrontendGlobal: GlobalAfterChangeHook = ({ global }) => {
       revalidatePaths(['/programs', '/faq', '/contacts'])
       break
     case 'legal-basic-info':
-      safeRevalidatePath('/svedeniya/basic')
+      safeRevalidatePath(`${INFO_BASE}/basic`)
       break
     case 'legal-structure':
-      safeRevalidatePath('/svedeniya/structure')
+      safeRevalidatePath(`${INFO_BASE}/structure`)
       break
     case 'legal-mtb':
-      safeRevalidatePath('/svedeniya/mtb')
+      safeRevalidatePath(`${INFO_BASE}/mtb`)
       break
     case 'legal-accessible-environment':
-      safeRevalidatePath('/svedeniya/accessible-environment')
+      safeRevalidatePath(`${INFO_BASE}/accessible-environment`)
       break
     case 'legal-international':
-      safeRevalidatePath('/svedeniya/international')
+      safeRevalidatePath(`${INFO_BASE}/international`)
       break
     case 'legal-scholarships':
-      safeRevalidatePath('/svedeniya/scholarships')
+      safeRevalidatePath(`${INFO_BASE}/scholarships`)
       break
     case 'legal-paid-services':
-      safeRevalidatePath('/svedeniya/paid-services')
+      safeRevalidatePath(`${INFO_BASE}/paid-services`)
       break
     case 'legal-finance':
-      safeRevalidatePath('/svedeniya/finance')
+      safeRevalidatePath(`${INFO_BASE}/finance`)
       break
     case 'legal-standards':
-      safeRevalidatePath('/svedeniya/standards')
+      safeRevalidatePath(`${INFO_BASE}/standards`)
       break
     default:
-      safeRevalidatePath('/svedeniya')
+      safeRevalidatePath(INFO_BASE)
       break
   }
 
