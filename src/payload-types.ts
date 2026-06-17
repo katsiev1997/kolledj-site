@@ -69,6 +69,18 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    campuses: Campus;
+    programs: Program;
+    news: News;
+    faq: Faq;
+    pages: Page;
+    partners: Partner;
+    events: Event;
+    promotions: Promotion;
+    applications: Application;
+    documents: Document;
+    staff: Staff;
+    vacancies: Vacancy;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -78,6 +90,18 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    campuses: CampusesSelect<false> | CampusesSelect<true>;
+    programs: ProgramsSelect<false> | ProgramsSelect<true>;
+    news: NewsSelect<false> | NewsSelect<true>;
+    faq: FaqSelect<false> | FaqSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+    partners: PartnersSelect<false> | PartnersSelect<true>;
+    events: EventsSelect<false> | EventsSelect<true>;
+    promotions: PromotionsSelect<false> | PromotionsSelect<true>;
+    applications: ApplicationsSelect<false> | ApplicationsSelect<true>;
+    documents: DocumentsSelect<false> | DocumentsSelect<true>;
+    staff: StaffSelect<false> | StaffSelect<true>;
+    vacancies: VacanciesSelect<false> | VacanciesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -87,8 +111,34 @@ export interface Config {
     defaultIDType: string;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    'site-settings': SiteSetting;
+    homepage: Homepage;
+    'page-content': PageContent;
+    'legal-basic-info': LegalBasicInfo;
+    'legal-structure': LegalStructure;
+    'legal-mtb': LegalMtb;
+    'legal-accessible-environment': LegalAccessibleEnvironment;
+    'legal-international': LegalInternational;
+    'legal-scholarships': LegalScholarship;
+    'legal-paid-services': LegalPaidService;
+    'legal-finance': LegalFinance;
+    'legal-standards': LegalStandard;
+  };
+  globalsSelect: {
+    'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    homepage: HomepageSelect<false> | HomepageSelect<true>;
+    'page-content': PageContentSelect<false> | PageContentSelect<true>;
+    'legal-basic-info': LegalBasicInfoSelect<false> | LegalBasicInfoSelect<true>;
+    'legal-structure': LegalStructureSelect<false> | LegalStructureSelect<true>;
+    'legal-mtb': LegalMtbSelect<false> | LegalMtbSelect<true>;
+    'legal-accessible-environment': LegalAccessibleEnvironmentSelect<false> | LegalAccessibleEnvironmentSelect<true>;
+    'legal-international': LegalInternationalSelect<false> | LegalInternationalSelect<true>;
+    'legal-scholarships': LegalScholarshipsSelect<false> | LegalScholarshipsSelect<true>;
+    'legal-paid-services': LegalPaidServicesSelect<false> | LegalPaidServicesSelect<true>;
+    'legal-finance': LegalFinanceSelect<false> | LegalFinanceSelect<true>;
+    'legal-standards': LegalStandardsSelect<false> | LegalStandardsSelect<true>;
+  };
   locale: null;
   widgets: {
     collections: CollectionsWidget;
@@ -123,6 +173,7 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: string;
+  roles: ('admin' | 'editor')[];
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -149,6 +200,7 @@ export interface User {
 export interface Media {
   id: string;
   alt: string;
+  caption?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -160,6 +212,453 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    hero?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "campuses".
+ */
+export interface Campus {
+  id: string;
+  name: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  city: string;
+  address: string;
+  metro?: string | null;
+  phone?: string | null;
+  email?: string | null;
+  workingHours?: string | null;
+  latitude?: number | null;
+  longitude?: number | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "programs".
+ */
+export interface Program {
+  id: string;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  shortDescription?: string | null;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  cover?: (string | null) | Media;
+  category: 'college' | 'course' | 'higher';
+  studyForms?: ('full-time' | 'part-time' | 'distance')[] | null;
+  base?: ('9' | '11')[] | null;
+  duration?: string | null;
+  price?: number | null;
+  campuses?: (string | Campus)[] | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  legal?: {
+    specialtyCode?: string | null;
+    specialtyName?: string | null;
+    languageOfInstruction?: string | null;
+    accreditationValidUntil?: string | null;
+    disciplines?: string | null;
+    usesDistanceTechnologies?: boolean | null;
+    distanceTechnologiesDescription?: string | null;
+    licenseDocument?: (string | null) | Document;
+    programDocuments?:
+      | {
+          type: 'study-plan' | 'work-program' | 'calendar' | 'methodical' | 'education-program' | 'education-calendar';
+          title: string;
+          document?: (string | null) | Document;
+          file?: (string | null) | Media;
+          id?: string | null;
+        }[]
+      | null;
+    studentCounts?:
+      | {
+          year: number;
+          rows?:
+            | {
+                fundingSource: 'federal' | 'regional' | 'local' | 'paid' | 'other';
+                count: number;
+                foreignCitizens?: number | null;
+                id?: string | null;
+              }[]
+            | null;
+          id?: string | null;
+        }[]
+      | null;
+    admissionResults?:
+      | {
+          year: number;
+          fundingSource: 'federal' | 'regional' | 'local' | 'paid' | 'other';
+          admittedCount?: number | null;
+          averageScore?: number | null;
+          transferredCount?: number | null;
+          expelledCount?: number | null;
+          restoredCount?: number | null;
+          id?: string | null;
+        }[]
+      | null;
+    employmentStats?:
+      | {
+          year: number;
+          graduatesCount?: number | null;
+          employedCount?: number | null;
+          employmentRate?: number | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "documents".
+ */
+export interface Document {
+  id: string;
+  title: string;
+  description?: string | null;
+  category:
+    | 'charter'
+    | 'accreditation'
+    | 'license'
+    | 'student-rules'
+    | 'labor-rules'
+    | 'collective-agreement'
+    | 'self-examination'
+    | 'supervisory-order'
+    | 'local-act'
+    | 'study-plan'
+    | 'work-program'
+    | 'calendar'
+    | 'methodical'
+    | 'paid-services-procedure'
+    | 'contract-sample'
+    | 'finance-plan'
+    | 'unit-regulation'
+    | 'federal-standard'
+    | 'own-standard'
+    | 'other';
+  section?: ('legal' | 'marketing') | null;
+  file: string | Media;
+  externalUrl?: string | null;
+  signedWithEP?: boolean | null;
+  program?: (string | null) | Program;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news".
+ */
+export interface News {
+  id: string;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  excerpt?: string | null;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  category?: string | null;
+  cover?: (string | null) | Media;
+  publishedAt?: string | null;
+  readingTime?: number | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq".
+ */
+export interface Faq {
+  id: string;
+  question: string;
+  answer: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  category?: ('admission' | 'study' | 'payment' | 'documents' | 'benefits' | 'general') | null;
+  order?: number | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: string;
+  title: string;
+  /**
+   * Используется в тизере на главной странице
+   */
+  excerpt?: string | null;
+  ctaText?: string | null;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  template?: ('about' | 'privacy' | 'generic') | null;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "partners".
+ */
+export interface Partner {
+  id: string;
+  name: string;
+  logo?: (string | null) | Media;
+  url?: string | null;
+  description?: string | null;
+  order?: number | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events".
+ */
+export interface Event {
+  id: string;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  date: string;
+  location?: string | null;
+  campus?: (string | null) | Campus;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  registrationEnabled?: boolean | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "promotions".
+ */
+export interface Promotion {
+  id: string;
+  title: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  conditions?: string | null;
+  activeFrom?: string | null;
+  activeTo?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "applications".
+ */
+export interface Application {
+  id: string;
+  type: 'consultation' | 'enrollment' | 'openDay' | 'feedback' | 'partnership';
+  name: string;
+  phone: string;
+  email?: string | null;
+  program?: (string | null) | Program;
+  message?: string | null;
+  consent: boolean;
+  status: 'new' | 'inProgress' | 'done';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "staff".
+ */
+export interface Staff {
+  id: string;
+  fullName: string;
+  role: 'director' | 'deputy' | 'branchHead' | 'teacher';
+  position: string;
+  photo?: (string | null) | Media;
+  phone?: string | null;
+  email?: string | null;
+  education?: string | null;
+  degree?: string | null;
+  training?: string | null;
+  totalExperience?: number | null;
+  specialtyExperience?: number | null;
+  teachesSubjects?: string | null;
+  teachesPrograms?: (string | Program)[] | null;
+  campus?: (string | null) | Campus;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "vacancies".
+ */
+export interface Vacancy {
+  id: string;
+  label?: string | null;
+  program: string | Program;
+  academicYear: string;
+  fundingSource: 'federal' | 'regional' | 'local' | 'paid' | 'other';
+  placesForAdmission: number;
+  placesForTransfer?: number | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -192,6 +691,54 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'campuses';
+        value: string | Campus;
+      } | null)
+    | ({
+        relationTo: 'programs';
+        value: string | Program;
+      } | null)
+    | ({
+        relationTo: 'news';
+        value: string | News;
+      } | null)
+    | ({
+        relationTo: 'faq';
+        value: string | Faq;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: string | Page;
+      } | null)
+    | ({
+        relationTo: 'partners';
+        value: string | Partner;
+      } | null)
+    | ({
+        relationTo: 'events';
+        value: string | Event;
+      } | null)
+    | ({
+        relationTo: 'promotions';
+        value: string | Promotion;
+      } | null)
+    | ({
+        relationTo: 'applications';
+        value: string | Application;
+      } | null)
+    | ({
+        relationTo: 'documents';
+        value: string | Document;
+      } | null)
+    | ({
+        relationTo: 'staff';
+        value: string | Staff;
+      } | null)
+    | ({
+        relationTo: 'vacancies';
+        value: string | Vacancy;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -240,6 +787,7 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  roles?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -263,6 +811,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  caption?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -274,6 +823,336 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        card?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        hero?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "campuses_select".
+ */
+export interface CampusesSelect<T extends boolean = true> {
+  name?: T;
+  generateSlug?: T;
+  slug?: T;
+  city?: T;
+  address?: T;
+  metro?: T;
+  phone?: T;
+  email?: T;
+  workingHours?: T;
+  latitude?: T;
+  longitude?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "programs_select".
+ */
+export interface ProgramsSelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
+  slug?: T;
+  shortDescription?: T;
+  description?: T;
+  cover?: T;
+  category?: T;
+  studyForms?: T;
+  base?: T;
+  duration?: T;
+  price?: T;
+  campuses?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  legal?:
+    | T
+    | {
+        specialtyCode?: T;
+        specialtyName?: T;
+        languageOfInstruction?: T;
+        accreditationValidUntil?: T;
+        disciplines?: T;
+        usesDistanceTechnologies?: T;
+        distanceTechnologiesDescription?: T;
+        licenseDocument?: T;
+        programDocuments?:
+          | T
+          | {
+              type?: T;
+              title?: T;
+              document?: T;
+              file?: T;
+              id?: T;
+            };
+        studentCounts?:
+          | T
+          | {
+              year?: T;
+              rows?:
+                | T
+                | {
+                    fundingSource?: T;
+                    count?: T;
+                    foreignCitizens?: T;
+                    id?: T;
+                  };
+              id?: T;
+            };
+        admissionResults?:
+          | T
+          | {
+              year?: T;
+              fundingSource?: T;
+              admittedCount?: T;
+              averageScore?: T;
+              transferredCount?: T;
+              expelledCount?: T;
+              restoredCount?: T;
+              id?: T;
+            };
+        employmentStats?:
+          | T
+          | {
+              year?: T;
+              graduatesCount?: T;
+              employedCount?: T;
+              employmentRate?: T;
+              id?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news_select".
+ */
+export interface NewsSelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
+  slug?: T;
+  excerpt?: T;
+  content?: T;
+  category?: T;
+  cover?: T;
+  publishedAt?: T;
+  readingTime?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq_select".
+ */
+export interface FaqSelect<T extends boolean = true> {
+  question?: T;
+  answer?: T;
+  category?: T;
+  order?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  excerpt?: T;
+  ctaText?: T;
+  generateSlug?: T;
+  slug?: T;
+  template?: T;
+  content?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "partners_select".
+ */
+export interface PartnersSelect<T extends boolean = true> {
+  name?: T;
+  logo?: T;
+  url?: T;
+  description?: T;
+  order?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events_select".
+ */
+export interface EventsSelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
+  slug?: T;
+  date?: T;
+  location?: T;
+  campus?: T;
+  description?: T;
+  registrationEnabled?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "promotions_select".
+ */
+export interface PromotionsSelect<T extends boolean = true> {
+  title?: T;
+  generateSlug?: T;
+  slug?: T;
+  description?: T;
+  conditions?: T;
+  activeFrom?: T;
+  activeTo?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "applications_select".
+ */
+export interface ApplicationsSelect<T extends boolean = true> {
+  type?: T;
+  name?: T;
+  phone?: T;
+  email?: T;
+  program?: T;
+  message?: T;
+  consent?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "documents_select".
+ */
+export interface DocumentsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  category?: T;
+  section?: T;
+  file?: T;
+  externalUrl?: T;
+  signedWithEP?: T;
+  program?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "staff_select".
+ */
+export interface StaffSelect<T extends boolean = true> {
+  fullName?: T;
+  role?: T;
+  position?: T;
+  photo?: T;
+  phone?: T;
+  email?: T;
+  education?: T;
+  degree?: T;
+  training?: T;
+  totalExperience?: T;
+  specialtyExperience?: T;
+  teachesSubjects?: T;
+  teachesPrograms?: T;
+  campus?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "vacancies_select".
+ */
+export interface VacanciesSelect<T extends boolean = true> {
+  label?: T;
+  program?: T;
+  academicYear?: T;
+  fundingSource?: T;
+  placesForAdmission?: T;
+  placesForTransfer?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -314,6 +1193,812 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings".
+ */
+export interface SiteSetting {
+  id: string;
+  organizationName: string;
+  organizationShortName?: string | null;
+  phones?:
+    | {
+        label?: string | null;
+        number: string;
+        id?: string | null;
+      }[]
+    | null;
+  emails?:
+    | {
+        label?: string | null;
+        address: string;
+        id?: string | null;
+      }[]
+    | null;
+  workingHours?: string | null;
+  socialLinks?:
+    | {
+        platform: 'vk' | 'telegram' | 'youtube' | 'other';
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  requisites?: {
+    inn?: string | null;
+    kpp?: string | null;
+    ogrn?: string | null;
+    bankName?: string | null;
+    bik?: string | null;
+    checkingAccount?: string | null;
+    correspondentAccount?: string | null;
+  };
+  privacyPolicyPage?: (string | null) | Page;
+  uiLabels?: {
+    applicationButton?: string | null;
+    mobileMenuTitle?: string | null;
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    ogImage?: (string | null) | Media;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage".
+ */
+export interface Homepage {
+  id: string;
+  sectionTitles?: {
+    admissionSteps?: string | null;
+    programs?: string | null;
+    values?: string | null;
+    licenses?: string | null;
+    faq?: string | null;
+    events?: string | null;
+    news?: string | null;
+  };
+  actionLabels?: {
+    allPrograms?: string | null;
+    allDocuments?: string | null;
+    allFaq?: string | null;
+    allEvents?: string | null;
+    allNews?: string | null;
+    aboutCollege?: string | null;
+    viewPrograms?: string | null;
+  };
+  admissionSteps?:
+    | {
+        stepNumber: number;
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  stats?:
+    | {
+        value: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  values?:
+    | {
+        title: string;
+        description?: string | null;
+        icon?: (string | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  consultationCta?: {
+    title?: string | null;
+    description?: string | null;
+    buttonText?: string | null;
+  };
+  featuredPrograms?: (string | Program)[] | null;
+  featuredNews?: (string | News)[] | null;
+  featuredEvents?: (string | Event)[] | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "page-content".
+ */
+export interface PageContent {
+  id: string;
+  programsPage: {
+    title: string;
+    subtitle?: string | null;
+  };
+  faqPage: {
+    title: string;
+    subtitle?: string | null;
+  };
+  contactsPage: {
+    title: string;
+    subtitle?: string | null;
+    campusesTitle?: string | null;
+    intro?: {
+      root: {
+        type: string;
+        children: {
+          type: any;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-basic-info".
+ */
+export interface LegalBasicInfo {
+  id: string;
+  fullName: string;
+  shortName?: string | null;
+  createdAt?: string | null;
+  founder?: string | null;
+  branches?:
+    | {
+        name: string;
+        address?: string | null;
+        website?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  workingHours?: string | null;
+  educationLocations?:
+    | {
+        address: string;
+        notInLicenseRegistry?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  contacts?: {
+    phones?:
+      | {
+          label?: string | null;
+          number: string;
+          id?: string | null;
+        }[]
+      | null;
+    emails?:
+      | {
+          label?: string | null;
+          address: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  updatedAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-structure".
+ */
+export interface LegalStructure {
+  id: string;
+  units?:
+    | {
+        name: string;
+        headFullName?: string | null;
+        headPosition?: string | null;
+        address?: string | null;
+        email?: string | null;
+        website?: string | null;
+        regulationDoc?: (string | null) | Document;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-mtb".
+ */
+export interface LegalMtb {
+  id: string;
+  sections?:
+    | {
+        title:
+          | 'classrooms'
+          | 'practice'
+          | 'library'
+          | 'sport'
+          | 'teaching-aids'
+          | 'catering'
+          | 'health'
+          | 'it-access'
+          | 'eor';
+        description?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-accessible-environment".
+ */
+export interface LegalAccessibleEnvironment {
+  id: string;
+  sections?:
+    | {
+        title:
+          | 'classrooms'
+          | 'practice'
+          | 'library'
+          | 'sport'
+          | 'teaching-aids'
+          | 'entrance'
+          | 'catering'
+          | 'health'
+          | 'it-eor'
+          | 'special-equipment'
+          | 'dormitory';
+        description?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        adaptedPlacesCount?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-international".
+ */
+export interface LegalInternational {
+  id: string;
+  agreements?:
+    | {
+        partnerName: string;
+        country?: string | null;
+        status?: ('signed' | 'planned') | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  internationalAccreditation?:
+    | {
+        programName: string;
+        accreditationBody?: string | null;
+        validUntil?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-scholarships".
+ */
+export interface LegalScholarship {
+  id: string;
+  scholarships?:
+    | {
+        name: string;
+        conditions?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  socialSupport?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  dormitory?: {
+    available?: boolean | null;
+    placesForNonResidents?: number | null;
+    paymentProcedure?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-paid-services".
+ */
+export interface LegalPaidService {
+  id: string;
+  procedureDocument?: (string | null) | Document;
+  contractSample?: (string | null) | Document;
+  notes?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-finance".
+ */
+export interface LegalFinance {
+  id: string;
+  yearlyReports?:
+    | {
+        year: number;
+        activityVolumes?:
+          | {
+              fundingSource: 'federal' | 'regional' | 'local' | 'paid';
+              volume?: number | null;
+              id?: string | null;
+            }[]
+          | null;
+        income?: number | null;
+        expenses?: number | null;
+        planDocument?: (string | null) | Document;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-standards".
+ */
+export interface LegalStandard {
+  id: string;
+  federalStandards?:
+    | {
+        title: string;
+        document?: (string | null) | Document;
+        externalUrl?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  ownStandards?:
+    | {
+        title: string;
+        document?: (string | null) | Document;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings_select".
+ */
+export interface SiteSettingsSelect<T extends boolean = true> {
+  organizationName?: T;
+  organizationShortName?: T;
+  phones?:
+    | T
+    | {
+        label?: T;
+        number?: T;
+        id?: T;
+      };
+  emails?:
+    | T
+    | {
+        label?: T;
+        address?: T;
+        id?: T;
+      };
+  workingHours?: T;
+  socialLinks?:
+    | T
+    | {
+        platform?: T;
+        url?: T;
+        id?: T;
+      };
+  requisites?:
+    | T
+    | {
+        inn?: T;
+        kpp?: T;
+        ogrn?: T;
+        bankName?: T;
+        bik?: T;
+        checkingAccount?: T;
+        correspondentAccount?: T;
+      };
+  privacyPolicyPage?: T;
+  uiLabels?:
+    | T
+    | {
+        applicationButton?: T;
+        mobileMenuTitle?: T;
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        ogImage?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage_select".
+ */
+export interface HomepageSelect<T extends boolean = true> {
+  sectionTitles?:
+    | T
+    | {
+        admissionSteps?: T;
+        programs?: T;
+        values?: T;
+        licenses?: T;
+        faq?: T;
+        events?: T;
+        news?: T;
+      };
+  actionLabels?:
+    | T
+    | {
+        allPrograms?: T;
+        allDocuments?: T;
+        allFaq?: T;
+        allEvents?: T;
+        allNews?: T;
+        aboutCollege?: T;
+        viewPrograms?: T;
+      };
+  admissionSteps?:
+    | T
+    | {
+        stepNumber?: T;
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  values?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        icon?: T;
+        id?: T;
+      };
+  consultationCta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        buttonText?: T;
+      };
+  featuredPrograms?: T;
+  featuredNews?: T;
+  featuredEvents?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "page-content_select".
+ */
+export interface PageContentSelect<T extends boolean = true> {
+  programsPage?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+      };
+  faqPage?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+      };
+  contactsPage?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+        campusesTitle?: T;
+        intro?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-basic-info_select".
+ */
+export interface LegalBasicInfoSelect<T extends boolean = true> {
+  fullName?: T;
+  shortName?: T;
+  createdAt?: T;
+  founder?: T;
+  branches?:
+    | T
+    | {
+        name?: T;
+        address?: T;
+        website?: T;
+        id?: T;
+      };
+  workingHours?: T;
+  educationLocations?:
+    | T
+    | {
+        address?: T;
+        notInLicenseRegistry?: T;
+        id?: T;
+      };
+  contacts?:
+    | T
+    | {
+        phones?:
+          | T
+          | {
+              label?: T;
+              number?: T;
+              id?: T;
+            };
+        emails?:
+          | T
+          | {
+              label?: T;
+              address?: T;
+              id?: T;
+            };
+      };
+  updatedAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-structure_select".
+ */
+export interface LegalStructureSelect<T extends boolean = true> {
+  units?:
+    | T
+    | {
+        name?: T;
+        headFullName?: T;
+        headPosition?: T;
+        address?: T;
+        email?: T;
+        website?: T;
+        regulationDoc?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-mtb_select".
+ */
+export interface LegalMtbSelect<T extends boolean = true> {
+  sections?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-accessible-environment_select".
+ */
+export interface LegalAccessibleEnvironmentSelect<T extends boolean = true> {
+  sections?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        adaptedPlacesCount?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-international_select".
+ */
+export interface LegalInternationalSelect<T extends boolean = true> {
+  agreements?:
+    | T
+    | {
+        partnerName?: T;
+        country?: T;
+        status?: T;
+        description?: T;
+        id?: T;
+      };
+  internationalAccreditation?:
+    | T
+    | {
+        programName?: T;
+        accreditationBody?: T;
+        validUntil?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-scholarships_select".
+ */
+export interface LegalScholarshipsSelect<T extends boolean = true> {
+  scholarships?:
+    | T
+    | {
+        name?: T;
+        conditions?: T;
+        id?: T;
+      };
+  socialSupport?: T;
+  dormitory?:
+    | T
+    | {
+        available?: T;
+        placesForNonResidents?: T;
+        paymentProcedure?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-paid-services_select".
+ */
+export interface LegalPaidServicesSelect<T extends boolean = true> {
+  procedureDocument?: T;
+  contractSample?: T;
+  notes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-finance_select".
+ */
+export interface LegalFinanceSelect<T extends boolean = true> {
+  yearlyReports?:
+    | T
+    | {
+        year?: T;
+        activityVolumes?:
+          | T
+          | {
+              fundingSource?: T;
+              volume?: T;
+              id?: T;
+            };
+        income?: T;
+        expenses?: T;
+        planDocument?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal-standards_select".
+ */
+export interface LegalStandardsSelect<T extends boolean = true> {
+  federalStandards?:
+    | T
+    | {
+        title?: T;
+        document?: T;
+        externalUrl?: T;
+        id?: T;
+      };
+  ownStandards?:
+    | T
+    | {
+        title?: T;
+        document?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

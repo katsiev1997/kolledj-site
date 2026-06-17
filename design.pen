@@ -1,0 +1,5704 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "B1Wr9I",
+      "x": 0,
+      "y": 0,
+      "name": "_library",
+      "width": 1494,
+      "fill": "$muted",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "frame",
+          "id": "M95MvL",
+          "name": "Button/Primary",
+          "reusable": true,
+          "height": 40,
+          "fill": "$primary",
+          "cornerRadius": "$radius-pill",
+          "gap": 8,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Ttjf9",
+              "name": "label",
+              "fill": "$primary-foreground",
+              "content": "Button",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lAvQc",
+          "name": "Button/Secondary",
+          "reusable": true,
+          "height": 40,
+          "fill": "$secondary",
+          "cornerRadius": "$radius-pill",
+          "gap": 8,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "HVOo3",
+              "name": "label",
+              "fill": "$secondary-foreground",
+              "content": "Button",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gbeQt",
+          "name": "Button/Outline",
+          "reusable": true,
+          "height": 40,
+          "fill": "#00000000",
+          "cornerRadius": "$radius-pill",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "gap": 8,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "xfpjl",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Button",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B9dXh",
+          "name": "Badge/Secondary",
+          "reusable": true,
+          "height": 24,
+          "fill": "$secondary",
+          "cornerRadius": "$radius-pill",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "toMoj",
+              "name": "label",
+              "fill": "$secondary-foreground",
+              "content": "Badge",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xCFQU",
+          "name": "Badge/Outline",
+          "reusable": true,
+          "height": 24,
+          "fill": "#00000000",
+          "cornerRadius": "$radius-pill",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            10
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Hqzre",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Badge",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OEF5q",
+          "name": "Card",
+          "reusable": true,
+          "width": 360,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "DlqFY",
+              "name": "header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qH01F",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Заголовок",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AfN07",
+              "name": "content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                0,
+                24,
+                24,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "e58ko1",
+                  "name": "body",
+                  "fill": "$muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Текст карточки",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fefp2",
+              "name": "footer",
+              "width": "fill_container",
+              "padding": [
+                0,
+                24,
+                24,
+                24
+              ],
+              "children": [
+                {
+                  "id": "CklRI",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Действие"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hhVW1",
+          "name": "SectionHeader",
+          "reusable": true,
+          "width": 1200,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "lTYLD",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Заголовок секции",
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "id": "mu51f",
+              "type": "ref",
+              "ref": "gbeQt",
+              "name": "action",
+              "descendants": {
+                "xfpjl": {
+                  "content": "Все"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t1qLid",
+          "name": "StepCard",
+          "reusable": true,
+          "width": 280,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "F7BMhs",
+              "name": "step",
+              "fill": "$primary",
+              "content": "Шаг 1",
+              "fontFamily": "$font-primary",
+              "fontSize": 13,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "CobXv",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Заголовок шага",
+              "fontFamily": "$font-primary",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "vROZ5",
+              "name": "description",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Описание шага",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FPRwt",
+          "name": "StatBlock",
+          "reusable": true,
+          "width": 260,
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ipux9",
+              "name": "value",
+              "fill": "$primary",
+              "content": "500+",
+              "fontFamily": "$font-primary",
+              "fontSize": 40,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "ldmxt",
+              "name": "label",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Студентов",
+              "textAlign": "center",
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "P7LVMf",
+          "name": "ValueCard",
+          "reusable": true,
+          "width": 360,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "k3eGCG",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ценность",
+              "fontFamily": "$font-primary",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "nIczj",
+              "name": "description",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Описание ценности колледжа",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "utJZg",
+          "name": "ProgramCard",
+          "reusable": true,
+          "width": 360,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "O0DN8Q",
+              "name": "cover",
+              "width": "fill_container",
+              "height": 200,
+              "fill": "$muted"
+            },
+            {
+              "type": "frame",
+              "id": "woPJr",
+              "name": "body",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ud3uS",
+                  "name": "badges",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "id": "YfiyX",
+                      "type": "ref",
+                      "ref": "B9dXh",
+                      "descendants": {
+                        "toMoj": {
+                          "content": "Колледж (СПО)"
+                        }
+                      }
+                    },
+                    {
+                      "id": "CynE1",
+                      "type": "ref",
+                      "ref": "xCFQU",
+                      "descendants": {
+                        "Hqzre": {
+                          "content": "Очная"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "r1gwiN",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Программирование и информационные технологии",
+                  "lineHeight": 1.3,
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HVBOR",
+                  "name": "description",
+                  "fill": "$muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Современная программа с практикой на реальных проектах и стажировками у партнёров.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "xcDNq",
+                  "name": "meta",
+                  "fill": "$muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "3 года 10 мес · от 85 000 ₽ · После 9 класса",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qgorW",
+              "name": "footer",
+              "width": "fill_container",
+              "padding": [
+                0,
+                24,
+                24,
+                24
+              ],
+              "children": [
+                {
+                  "id": "N2W27",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "width": "fill_container",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Подробнее"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BvYRh",
+          "name": "NewsCard",
+          "reusable": true,
+          "width": 360,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "C6Cknk",
+              "name": "date",
+              "fill": "$muted-foreground",
+              "content": "12 июня 2026",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "FjNW8",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "День открытых дверей: знакомство с колледжем и программами",
+              "lineHeight": 1.3,
+              "fontFamily": "$font-primary",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "qxsAG",
+              "name": "excerpt",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Приглашаем абитуриентов и родителей на экскурсию по кампусу и консультации с приёмной комиссией.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "On6eL",
+          "name": "EventCard",
+          "reusable": true,
+          "width": 360,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "X8gQ6B",
+              "name": "date",
+              "fill": "$primary",
+              "content": "20 июня · 14:00",
+              "fontFamily": "$font-primary",
+              "fontSize": 13,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "vOcoj",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Мастер-класс по цифровому дизайну",
+              "lineHeight": 1.3,
+              "fontFamily": "$font-primary",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "kt8XW",
+              "name": "location",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Главный корпус, ауд. 204",
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "mE3ZZ",
+              "type": "ref",
+              "ref": "M95MvL",
+              "descendants": {
+                "Ttjf9": {
+                  "content": "Записаться"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "q34YGF",
+          "name": "FAQItem",
+          "reusable": true,
+          "width": 1200,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            20,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "RI38d",
+              "name": "question",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Какие документы нужны для поступления?",
+              "fontFamily": "$font-primary",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "CMBjU",
+              "name": "answer",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Паспорт, аттестат, фотографии 3×4 и заявление. Полный список доступен в разделе FAQ.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dqHRu",
+          "name": "LicenseCard",
+          "reusable": true,
+          "width": 580,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "z9aqnO",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Лицензия на образовательную деятельность",
+              "fontFamily": "$font-primary",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "k1FkDO",
+              "name": "description",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Бессрочная лицензия Министерства образования.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "CdGsb",
+              "type": "ref",
+              "ref": "gbeQt",
+              "descendants": {
+                "xfpjl": {
+                  "content": "Открыть документ"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JV11q",
+          "name": "Header",
+          "reusable": true,
+          "width": 1440,
+          "height": 72,
+          "fill": "$background",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gp4Y8",
+              "name": "left",
+              "gap": 48,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OQH9d",
+                  "name": "logo",
+                  "fill": "$foreground",
+                  "content": "Колледж",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "ac5wg",
+                  "name": "nav",
+                  "gap": 4,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "A95W9",
+                      "name": "nav-Каталог",
+                      "height": 36,
+                      "fill": "#00000000",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MIGDU",
+                          "name": "label",
+                          "fill": "$muted-foreground",
+                          "content": "Каталог",
+                          "fontFamily": "$font-primary",
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z4nXNo",
+                      "name": "nav-Новости",
+                      "height": 36,
+                      "fill": "#00000000",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cNd0D",
+                          "name": "label",
+                          "fill": "$muted-foreground",
+                          "content": "Новости",
+                          "fontFamily": "$font-primary",
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fmUKH",
+                      "name": "nav-О колледже",
+                      "height": 36,
+                      "fill": "$muted",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yVONZ",
+                          "name": "label",
+                          "fill": "$foreground",
+                          "content": "О колледже",
+                          "fontFamily": "$font-primary",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NbmYj",
+                      "name": "nav-FAQ",
+                      "height": 36,
+                      "fill": "#00000000",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "svdnQ",
+                          "name": "label",
+                          "fill": "$muted-foreground",
+                          "content": "FAQ",
+                          "fontFamily": "$font-primary",
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "M8jx1I",
+                      "name": "nav-Контакты",
+                      "height": 36,
+                      "fill": "#00000000",
+                      "cornerRadius": 8,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "w34i7",
+                          "name": "label",
+                          "fill": "$muted-foreground",
+                          "content": "Контакты",
+                          "fontFamily": "$font-primary",
+                          "fontSize": 14
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jU6E9",
+              "name": "right",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T0wqk8",
+                  "name": "phone",
+                  "fill": "$foreground",
+                  "content": "+7 (495) 123-45-67",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "eAlxG",
+                  "type": "ref",
+                  "ref": "M95MvL",
+                  "descendants": {
+                    "Ttjf9": {
+                      "content": "Оставить заявку"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ghXni",
+          "name": "Footer",
+          "reusable": true,
+          "width": 1440,
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "top": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            64,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "qXvkP",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MX1zk",
+                  "name": "col-contacts",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CX2ME",
+                      "name": "org",
+                      "fill": "$foreground",
+                      "content": "Государственный колледж информационных технологий",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xaCCW",
+                      "name": "hours",
+                      "fill": "$muted-foreground",
+                      "content": "Пн–Пт: 9:00–18:00",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EJLTq",
+                      "name": "phone",
+                      "fill": "$foreground",
+                      "content": "+7 (495) 123-45-67",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G1RFNW",
+                      "name": "email",
+                      "fill": "$foreground",
+                      "content": "info@college.ru",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MLwBl",
+                  "name": "col-nav",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A3hK9t",
+                      "name": "title",
+                      "fill": "$foreground",
+                      "content": "Навигация",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YJiH3",
+                      "name": "link-Каталог",
+                      "fill": "$muted-foreground",
+                      "content": "Каталог",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "a3RMB",
+                      "name": "link-Новости",
+                      "fill": "$muted-foreground",
+                      "content": "Новости",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BJbLc",
+                      "name": "link-Партнёры",
+                      "fill": "$muted-foreground",
+                      "content": "Партнёры",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rEO98",
+                      "name": "link-FAQ",
+                      "fill": "$muted-foreground",
+                      "content": "FAQ",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F7yZs",
+                      "name": "link-Контакты",
+                      "fill": "$muted-foreground",
+                      "content": "Контакты",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sUf8f",
+                  "name": "col-legal",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "J3E77",
+                      "name": "title",
+                      "fill": "$foreground",
+                      "content": "Сведения об организации",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uwdhj",
+                      "name": "link-Образовательная организация",
+                      "fill": "$muted-foreground",
+                      "content": "Образовательная организация",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JNDHk",
+                      "name": "link-Основные сведения",
+                      "fill": "$muted-foreground",
+                      "content": "Основные сведения",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yXWPE",
+                      "name": "link-Документы",
+                      "fill": "$muted-foreground",
+                      "content": "Документы",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bJoYh",
+                      "name": "link-Образование",
+                      "fill": "$muted-foreground",
+                      "content": "Образование",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "boYIy",
+              "name": "bottom",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "top": 1
+              },
+              "strokeAlignment": "inner",
+              "padding": [
+                24,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eGeSG",
+                  "name": "copyright",
+                  "fill": "$muted-foreground",
+                  "content": "© 2026 Колледж",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "NyXVP",
+                  "name": "privacy",
+                  "fill": "$muted-foreground",
+                  "content": "Политика конфиденциальности",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "j4Q8oR",
+          "name": "Header/Mobile",
+          "reusable": true,
+          "width": 375,
+          "height": 64,
+          "fill": "$background",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "WU10x",
+              "name": "logo",
+              "fill": "$foreground",
+              "content": "Колледж",
+              "fontFamily": "$font-primary",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "mJe8d",
+              "name": "right",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "D81Oxk",
+                  "type": "ref",
+                  "ref": "M95MvL",
+                  "height": 36,
+                  "descendants": {
+                    "Ttjf9": {
+                      "content": "Заявка",
+                      "fontSize": 13
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "jwizf",
+                  "name": "menu",
+                  "width": 40,
+                  "height": 40,
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "Zsmf3",
+                      "name": "icon",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "menu",
+                      "library": "lucide",
+                      "fill": "$foreground"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Rg43A",
+          "name": "Footer/Mobile",
+          "reusable": true,
+          "width": 375,
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "top": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "G2Lq0O",
+              "name": "org",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Государственный колледж информационных технологий",
+              "lineHeight": 1.4,
+              "fontFamily": "$font-primary",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "LHpAT",
+              "name": "hours",
+              "fill": "$muted-foreground",
+              "content": "Пн–Пт: 9:00–18:00",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "roubM",
+              "name": "phone",
+              "fill": "$foreground",
+              "content": "+7 (495) 123-45-67",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "QEzq4",
+              "name": "email",
+              "fill": "$foreground",
+              "content": "info@college.ru",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lry4N",
+              "name": "nav",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "m9H0N8",
+                  "name": "nav-title",
+                  "fill": "$foreground",
+                  "content": "Навигация",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "owgCN",
+                  "name": "link-Каталог",
+                  "fill": "$muted-foreground",
+                  "content": "Каталог",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "k063K",
+                  "name": "link-Новости",
+                  "fill": "$muted-foreground",
+                  "content": "Новости",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "zKAC4",
+                  "name": "link-FAQ",
+                  "fill": "$muted-foreground",
+                  "content": "FAQ",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FiJWG",
+                  "name": "link-Контакты",
+                  "fill": "$muted-foreground",
+                  "content": "Контакты",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "b7c4m",
+                  "name": "link-Сведения об организации",
+                  "fill": "$muted-foreground",
+                  "content": "Сведения об организации",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NqWwn",
+              "name": "bottom",
+              "width": "fill_container",
+              "stroke": "$border",
+              "strokeWidth": {
+                "top": 1
+              },
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LmL5Z",
+                  "name": "copyright",
+                  "fill": "$muted-foreground",
+                  "content": "© 2026 Колледж",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "c5Hhc",
+                  "name": "privacy",
+                  "fill": "$muted-foreground",
+                  "content": "Политика конфиденциальности",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lgfAx",
+          "name": "NavLink/Mobile",
+          "reusable": true,
+          "width": 320,
+          "height": 44,
+          "cornerRadius": 8,
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "FIWWH",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Пункт меню",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OeKzC",
+          "name": "NavLink/Mobile Active",
+          "reusable": true,
+          "width": 320,
+          "height": 44,
+          "fill": "$muted",
+          "cornerRadius": 8,
+          "padding": [
+            0,
+            12
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "z4Wa9",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Пункт меню",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "l3cM4",
+          "name": "Sheet/MobileNav",
+          "reusable": true,
+          "width": 320,
+          "fill": "$background",
+          "stroke": "$border",
+          "strokeWidth": {
+            "left": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "nmjXr",
+              "name": "header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B7Uzdx",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Меню",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "lEK1R",
+                  "name": "close",
+                  "width": 36,
+                  "height": 36,
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "jwMtB",
+                      "name": "icon",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "x",
+                      "library": "lucide",
+                      "fill": "$muted-foreground"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AikKk",
+              "name": "nav",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "id": "OC9Mp",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "Каталог"
+                    }
+                  }
+                },
+                {
+                  "id": "CXt8q",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "Новости"
+                    }
+                  }
+                },
+                {
+                  "id": "XW80c",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "Партнёры"
+                    }
+                  }
+                },
+                {
+                  "id": "kFfwR",
+                  "type": "ref",
+                  "ref": "OeKzC",
+                  "width": "fill_container",
+                  "descendants": {
+                    "z4Wa9": {
+                      "content": "О колледже"
+                    }
+                  }
+                },
+                {
+                  "id": "Vauls",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "FAQ"
+                    }
+                  }
+                },
+                {
+                  "id": "ky9J5",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "Сведения об организации"
+                    }
+                  }
+                },
+                {
+                  "id": "kWhE1",
+                  "type": "ref",
+                  "ref": "lgfAx",
+                  "width": "fill_container",
+                  "descendants": {
+                    "FIWWH": {
+                      "content": "Контакты"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mb3JR",
+              "name": "divider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "$border"
+            },
+            {
+              "type": "text",
+              "id": "FnyW2",
+              "name": "phone",
+              "fill": "$foreground",
+              "content": "+7 (495) 123-45-67",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "U6nzKm",
+              "type": "ref",
+              "ref": "M95MvL",
+              "width": "fill_container",
+              "descendants": {
+                "Ttjf9": {
+                  "content": "Оставить заявку"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B2iDqY",
+          "name": "PageHero",
+          "reusable": true,
+          "width": 1440,
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "k9iFbb",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Заголовок страницы",
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "f8col",
+              "name": "subtitle",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": 720,
+              "content": "Описание страницы",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oB48F",
+          "name": "Tab/Default",
+          "reusable": true,
+          "height": 36,
+          "cornerRadius": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "OXsX0",
+              "name": "label",
+              "fill": "$muted-foreground",
+              "content": "Вкладка",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Q1Aha",
+          "name": "Tab/Active",
+          "reusable": true,
+          "height": 36,
+          "fill": "$background",
+          "cornerRadius": 8,
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Ij2Lk",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Вкладка",
+              "fontFamily": "$font-primary",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "thjwY",
+          "name": "FilterChip/Default",
+          "reusable": true,
+          "height": 32,
+          "cornerRadius": 8,
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SA5Fn",
+              "name": "label",
+              "fill": "$muted-foreground",
+              "content": "Фильтр",
+              "fontFamily": "$font-primary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OMeGa",
+          "name": "FilterChip/Active",
+          "reusable": true,
+          "height": 32,
+          "fill": "$muted",
+          "cornerRadius": 8,
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "padding": [
+            0,
+            12
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Ovkpx",
+              "name": "label",
+              "fill": "$foreground",
+              "content": "Фильтр",
+              "fontFamily": "$font-primary",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "sOXpS",
+          "name": "FAQAccordion/Closed",
+          "reusable": true,
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "padding": [
+            16,
+            0
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "JDLUj",
+              "name": "question",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Вопрос?",
+              "fontFamily": "$font-primary",
+              "fontSize": 15,
+              "fontWeight": "500"
+            },
+            {
+              "type": "icon",
+              "id": "btSR7",
+              "name": "chevron",
+              "width": 18,
+              "height": 18,
+              "icon": "chevron-down",
+              "library": "lucide",
+              "fill": "$muted-foreground"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lsMG7",
+          "name": "FAQAccordion/Open",
+          "reusable": true,
+          "width": 1200,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            16,
+            0,
+            20,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "U0vYm",
+              "name": "head",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hgEk9",
+                  "name": "question",
+                  "fill": "$foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Вопрос?",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "icon",
+                  "id": "mu0FO",
+                  "name": "chevron",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "chevron-up",
+                  "library": "lucide",
+                  "fill": "$muted-foreground"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "FrZNu",
+              "name": "answer",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ответ на вопрос.",
+              "lineHeight": 1.6,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "s3IcWI",
+          "name": "CampusCard",
+          "reusable": true,
+          "width": 580,
+          "fill": "$card",
+          "cornerRadius": "$radius",
+          "stroke": "$border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "i3deTX",
+              "name": "city",
+              "fill": "$primary",
+              "content": "Москва",
+              "fontFamily": "$font-primary",
+              "fontSize": 13,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "KK7tJ",
+              "name": "name",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Главный кампус",
+              "fontFamily": "$font-primary",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "O9sAp1",
+              "name": "address",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ул. Образовательная, д. 12",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "wTx2F",
+              "name": "metro",
+              "fill": "$muted-foreground",
+              "content": "м. Университет",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "xYlwu",
+              "name": "map",
+              "width": "fill_container",
+              "height": 160,
+              "fill": "$muted",
+              "cornerRadius": 8
+            },
+            {
+              "type": "text",
+              "id": "rSmAb",
+              "name": "phone",
+              "fill": "$foreground",
+              "content": "+7 (495) 123-45-67",
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "dTd45",
+              "name": "hours",
+              "fill": "$muted-foreground",
+              "content": "Пн–Пт: 9:00–18:00",
+              "fontFamily": "$font-secondary",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aH5DK",
+          "name": "Pagination",
+          "reusable": true,
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "P9AQJ",
+              "type": "ref",
+              "ref": "gbeQt",
+              "height": 36,
+              "descendants": {
+                "xfpjl": {
+                  "content": "Назад"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Ljns4",
+              "name": "page-1",
+              "width": 36,
+              "height": 36,
+              "fill": "$primary",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zc3nA",
+                  "name": "label",
+                  "fill": "$primary-foreground",
+                  "content": "1",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "L0Kqr",
+              "name": "page-2",
+              "width": 36,
+              "height": 36,
+              "fill": "#00000000",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dHAvn",
+                  "name": "label",
+                  "fill": "$foreground",
+                  "content": "2",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pN1PT",
+              "name": "page-3",
+              "width": 36,
+              "height": 36,
+              "fill": "#00000000",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dbTxQ",
+                  "name": "label",
+                  "fill": "$foreground",
+                  "content": "3",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "id": "q4Vx1k",
+              "type": "ref",
+              "ref": "gbeQt",
+              "height": 36,
+              "descendants": {
+                "xfpjl": {
+                  "content": "Далее"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "H3fFJt",
+      "x": 1605,
+      "y": 0,
+      "name": "Homepage / Desktop / Light",
+      "clip": true,
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "TsBRh",
+          "type": "ref",
+          "ref": "JV11q",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "p0b1n0",
+          "name": "Hero / Consultation",
+          "width": "fill_container",
+          "fill": "$primary",
+          "gap": 48,
+          "padding": [
+            96,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "nd6tz",
+              "name": "content",
+              "width": 640,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gPgXy",
+                  "name": "title",
+                  "fill": "$primary-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Поступай в колледж с уверенностью",
+                  "lineHeight": 1.15,
+                  "fontFamily": "$font-primary",
+                  "fontSize": 48,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "FfteG",
+                  "name": "description",
+                  "opacity": 0.9,
+                  "fill": "$primary-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Современные программы, практика у партнёров и сопровождение от первой консультации до диплома.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VFF5i",
+              "name": "actions",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "IBMnd",
+                  "type": "ref",
+                  "ref": "lAvQc",
+                  "descendants": {
+                    "HVOo3": {
+                      "content": "Оставить заявку"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "N5nNx",
+                  "name": "outline-btn",
+                  "height": 40,
+                  "cornerRadius": "$radius-pill",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qG9z3",
+                      "name": "label",
+                      "fill": "$primary-foreground",
+                      "content": "Смотреть программы",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xjlpm",
+          "name": "Admission Steps",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "XhYiN",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Как поступить",
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "WCBNN",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "r5g41b",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 1"
+                    },
+                    "CobXv": {
+                      "content": "Подайте заявку"
+                    },
+                    "vROZ5": {
+                      "content": "Оставьте контакты — мы перезвоним и ответим на вопросы."
+                    }
+                  }
+                },
+                {
+                  "id": "Q1Gf3C",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 2"
+                    },
+                    "CobXv": {
+                      "content": "Подготовьте документы"
+                    },
+                    "vROZ5": {
+                      "content": "Соберите аттестат, паспорт и фотографии по списку."
+                    }
+                  }
+                },
+                {
+                  "id": "n46mTc",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 3"
+                    },
+                    "CobXv": {
+                      "content": "Пройдите собеседование"
+                    },
+                    "vROZ5": {
+                      "content": "Короткая встреча с приёмной комиссией или онлайн-формат."
+                    }
+                  }
+                },
+                {
+                  "id": "dTinL",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 4"
+                    },
+                    "CobXv": {
+                      "content": "Начните обучение"
+                    },
+                    "vROZ5": {
+                      "content": "Получите расписание, доступ к платформе и welcome-набор."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y1CrW",
+          "name": "Programs",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "id": "cIKJz",
+              "type": "ref",
+              "ref": "hhVW1",
+              "width": "fill_container",
+              "descendants": {
+                "lTYLD": {
+                  "content": "Программы обучения"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "An1Pu",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "wneBV",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Программирование и ИТ"
+                    },
+                    "HVBOR": {
+                      "content": "Современная программа с практикой на реальных проектах."
+                    },
+                    "xcDNq": {
+                      "content": "3 года 10 мес · от 85 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "Vh19s",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Дизайн и медиакоммуникации"
+                    },
+                    "HVBOR": {
+                      "content": "Освоите графику, UX и работу с брендами."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 72 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "cKbFF",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Экономика и бухгалтерский учёт"
+                    },
+                    "HVBOR": {
+                      "content": "Подготовка к работе в финансовых службах."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 68 000 ₽"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yme5L",
+          "name": "About Teaser",
+          "width": "fill_container",
+          "gap": 48,
+          "padding": [
+            80,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PWlCw",
+              "name": "content",
+              "width": 720,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eD9VT",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "О колледже",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 32,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "afnyl",
+                  "name": "excerpt",
+                  "fill": "$muted-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Мы готовим специалистов, которые уверенно начинают карьеру. Сильная практика, наставники из индустрии и современная инфраструктура.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "id": "gOdIv",
+              "type": "ref",
+              "ref": "M95MvL",
+              "descendants": {
+                "Ttjf9": {
+                  "content": "Подробнее о колледже"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iv7CE",
+          "name": "Values",
+          "width": "fill_container",
+          "fill": "$muted",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "LjdLZ",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Наши ценности",
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "gNKck",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "s4rep",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Практика"
+                    },
+                    "nIczj": {
+                      "content": "80% времени — проекты, стажировки и реальные задачи."
+                    }
+                  }
+                },
+                {
+                  "id": "DsCpC",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Наставничество"
+                    },
+                    "nIczj": {
+                      "content": "Кураторы и преподаватели с опытом в индустрии."
+                    }
+                  }
+                },
+                {
+                  "id": "urUpX",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Сообщество"
+                    },
+                    "nIczj": {
+                      "content": "Клубы, хакатоны и карьерные мероприятия для студентов."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ns4NY",
+          "name": "Stats",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "FyPZY",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "id": "agYHe",
+                  "type": "ref",
+                  "ref": "FPRwt",
+                  "width": "fill_container",
+                  "descendants": {
+                    "ipux9": {
+                      "content": "15+"
+                    },
+                    "ldmxt": {
+                      "content": "лет опыта"
+                    }
+                  }
+                },
+                {
+                  "id": "Tj1qT",
+                  "type": "ref",
+                  "ref": "FPRwt",
+                  "width": "fill_container",
+                  "descendants": {
+                    "ipux9": {
+                      "content": "2 500+"
+                    },
+                    "ldmxt": {
+                      "content": "выпускников"
+                    }
+                  }
+                },
+                {
+                  "id": "x7cvF",
+                  "type": "ref",
+                  "ref": "FPRwt",
+                  "width": "fill_container",
+                  "descendants": {
+                    "ipux9": {
+                      "content": "40+"
+                    },
+                    "ldmxt": {
+                      "content": "партнёров"
+                    }
+                  }
+                },
+                {
+                  "id": "geHoz",
+                  "type": "ref",
+                  "ref": "FPRwt",
+                  "width": "fill_container",
+                  "descendants": {
+                    "ipux9": {
+                      "content": "92%"
+                    },
+                    "ldmxt": {
+                      "content": "трудоустройство"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "X4Rbg",
+          "name": "Events",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "id": "fpkPR",
+              "type": "ref",
+              "ref": "hhVW1",
+              "width": "fill_container",
+              "descendants": {
+                "lTYLD": {
+                  "content": "События"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "QpWij",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "SobQf",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "20 июня · 14:00"
+                    },
+                    "vOcoj": {
+                      "content": "Мастер-класс по цифровому дизайну"
+                    },
+                    "kt8XW": {
+                      "content": "Главный корпус, ауд. 204"
+                    }
+                  }
+                },
+                {
+                  "id": "rvw36",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "28 июня · 11:00"
+                    },
+                    "vOcoj": {
+                      "content": "День открытых дверей"
+                    },
+                    "kt8XW": {
+                      "content": "Кампус на ул. Образовательная"
+                    }
+                  }
+                },
+                {
+                  "id": "B8eyK",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "5 июля · 16:00"
+                    },
+                    "vOcoj": {
+                      "content": "Карьерная консультация"
+                    },
+                    "kt8XW": {
+                      "content": "Онлайн-формат"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DuFW9",
+          "name": "News",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "id": "S25PLN",
+              "type": "ref",
+              "ref": "hhVW1",
+              "width": "fill_container",
+              "descendants": {
+                "lTYLD": {
+                  "content": "Новости"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "WqbvQ",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "hxz6U",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "12 июня 2026"
+                    },
+                    "FjNW8": {
+                      "content": "День открытых дверей: знакомство с колледжем"
+                    },
+                    "qxsAG": {
+                      "content": "Приглашаем абитуриентов и родителей на экскурсию по кампусу."
+                    }
+                  }
+                },
+                {
+                  "id": "XDvda",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "3 июня 2026"
+                    },
+                    "FjNW8": {
+                      "content": "Студенты заняли призовые места на хакатоне"
+                    },
+                    "qxsAG": {
+                      "content": "Команда колледжа представила проект по автоматизации учёта."
+                    }
+                  }
+                },
+                {
+                  "id": "sCDCE",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "25 мая 2026"
+                    },
+                    "FjNW8": {
+                      "content": "Открыта запись на летнюю школу"
+                    },
+                    "qxsAG": {
+                      "content": "Интенсив для абитуриентов по программированию и дизайну."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "amFXk",
+          "name": "Licenses",
+          "width": "fill_container",
+          "fill": "$muted",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "cwAS3",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Лицензии и аккредитация",
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "m4NAg",
+              "name": "grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "z7L9Bs",
+                  "type": "ref",
+                  "ref": "dqHRu",
+                  "width": "fill_container",
+                  "descendants": {
+                    "z9aqnO": {
+                      "content": "Лицензия на образовательную деятельность"
+                    },
+                    "k1FkDO": {
+                      "content": "Бессрочная лицензия Министерства образования."
+                    }
+                  }
+                },
+                {
+                  "id": "jeoVs",
+                  "type": "ref",
+                  "ref": "dqHRu",
+                  "width": "fill_container",
+                  "descendants": {
+                    "z9aqnO": {
+                      "content": "Свидетельство о государственной аккредитации"
+                    },
+                    "k1FkDO": {
+                      "content": "Подтверждает соответствие образовательных стандартов."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "z2cHrE",
+              "type": "ref",
+              "ref": "gbeQt",
+              "descendants": {
+                "xfpjl": {
+                  "content": "Все документы"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KFws4",
+          "name": "FAQ",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "id": "sXrYx",
+              "type": "ref",
+              "ref": "hhVW1",
+              "width": "fill_container",
+              "descendants": {
+                "lTYLD": {
+                  "content": "Частые вопросы"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "I7t2m",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "id": "eFiU3",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Какие документы нужны для поступления?"
+                    },
+                    "CMBjU": {
+                      "content": "Паспорт, аттестат, фотографии 3×4 и заявление. Полный список доступен в разделе FAQ."
+                    }
+                  }
+                },
+                {
+                  "id": "Z7TXA",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Можно ли поступить на бюджет?"
+                    },
+                    "CMBjU": {
+                      "content": "Да, колледж набирает на бюджетные места. Количество мест указано в разделе «Сведения об организации»."
+                    }
+                  }
+                },
+                {
+                  "id": "IrqVD",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Есть ли общежитие?"
+                    },
+                    "CMBjU": {
+                      "content": "Для иногородних студентов предусмотрены места в общежитии при наличии свободных мест."
+                    }
+                  }
+                },
+                {
+                  "id": "EquXT",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Как записаться на консультацию?"
+                    },
+                    "CMBjU": {
+                      "content": "Оставьте заявку на сайте или позвоните по телефону приёмной комиссии."
+                    }
+                  }
+                },
+                {
+                  "id": "bRaKK",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Какие формы обучения доступны?"
+                    },
+                    "CMBjU": {
+                      "content": "Очная, заочная и дистанционная — в зависимости от программы."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eadcw",
+          "type": "ref",
+          "ref": "ghXni",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "dlVM2",
+      "x": 3184,
+      "y": 0,
+      "name": "Homepage / Mobile / Light",
+      "clip": true,
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "Sm9MM",
+          "type": "ref",
+          "ref": "j4Q8oR",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "AGJDU",
+          "name": "Hero / Consultation",
+          "width": "fill_container",
+          "fill": "$primary",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Y1Gk0x",
+              "name": "title",
+              "fill": "$primary-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Поступай в колледж с уверенностью",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-primary",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "I1orWZ",
+              "name": "description",
+              "opacity": 0.9,
+              "fill": "$primary-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Современные программы, практика у партнёров и сопровождение от первой консультации до диплома.",
+              "lineHeight": 1.6,
+              "fontFamily": "$font-secondary",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "kBNIV",
+              "name": "actions",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "IgUQm",
+                  "type": "ref",
+                  "ref": "lAvQc",
+                  "width": "fill_container",
+                  "descendants": {
+                    "HVOo3": {
+                      "content": "Оставить заявку"
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "S2aeO",
+                  "name": "outline-btn",
+                  "width": "fill_container",
+                  "height": 40,
+                  "cornerRadius": "$radius-pill",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OgIyW",
+                      "name": "label",
+                      "fill": "$primary-foreground",
+                      "content": "Смотреть программы",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Z0R0Lk",
+          "name": "Admission Steps",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "wRNbE",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Как поступить",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "qPaaU",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "j73IB",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 1"
+                    },
+                    "CobXv": {
+                      "content": "Подайте заявку"
+                    },
+                    "vROZ5": {
+                      "content": "Оставьте контакты — мы перезвоним и ответим на вопросы."
+                    }
+                  }
+                },
+                {
+                  "id": "fsvCn",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 2"
+                    },
+                    "CobXv": {
+                      "content": "Подготовьте документы"
+                    },
+                    "vROZ5": {
+                      "content": "Соберите аттестат, паспорт и фотографии по списку."
+                    }
+                  }
+                },
+                {
+                  "id": "w9b8Be",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 3"
+                    },
+                    "CobXv": {
+                      "content": "Пройдите собеседование"
+                    },
+                    "vROZ5": {
+                      "content": "Короткая встреча с приёмной комиссией или онлайн-формат."
+                    }
+                  }
+                },
+                {
+                  "id": "iiNdS",
+                  "type": "ref",
+                  "ref": "t1qLid",
+                  "width": "fill_container",
+                  "descendants": {
+                    "F7BMhs": {
+                      "content": "Шаг 4"
+                    },
+                    "CobXv": {
+                      "content": "Начните обучение"
+                    },
+                    "vROZ5": {
+                      "content": "Получите расписание, доступ к платформе и welcome-набор."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NxY9G",
+          "name": "Programs",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y8Z50t",
+              "name": "header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tdkvE",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Программы обучения",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "id": "PJP1D",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "width": "fit_content",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Все программы"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "q1TqYx",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "GCRBJ",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Программирование и ИТ"
+                    },
+                    "HVBOR": {
+                      "content": "Современная программа с практикой на реальных проектах."
+                    },
+                    "xcDNq": {
+                      "content": "3 года 10 мес · от 85 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "JsUMz",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Дизайн и медиакоммуникации"
+                    },
+                    "HVBOR": {
+                      "content": "Освоите графику, UX и работу с брендами."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 72 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "c5QADW",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Экономика и бухгалтерский учёт"
+                    },
+                    "HVBOR": {
+                      "content": "Подготовка к работе в финансовых службах."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 68 000 ₽"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uNG0Q",
+          "name": "About Teaser",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "qe84G",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "О колледже",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "qYlNn",
+              "name": "excerpt",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Мы готовим специалистов, которые уверенно начинают карьеру. Сильная практика, наставники из индустрии и современная инфраструктура.",
+              "lineHeight": 1.6,
+              "fontFamily": "$font-secondary",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "id": "BSpsM",
+              "type": "ref",
+              "ref": "M95MvL",
+              "width": "fill_container",
+              "descendants": {
+                "Ttjf9": {
+                  "content": "Подробнее о колледже"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ly18B",
+          "name": "Values",
+          "width": "fill_container",
+          "fill": "$muted",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "HkCdz",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Наши ценности",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "t46kn9",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "bXDuz",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Практика"
+                    },
+                    "nIczj": {
+                      "content": "80% времени — проекты, стажировки и реальные задачи."
+                    }
+                  }
+                },
+                {
+                  "id": "iqiUe",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Наставничество"
+                    },
+                    "nIczj": {
+                      "content": "Кураторы и преподаватели с опытом в индустрии."
+                    }
+                  }
+                },
+                {
+                  "id": "XWcO1",
+                  "type": "ref",
+                  "ref": "P7LVMf",
+                  "width": "fill_container",
+                  "descendants": {
+                    "k3eGCG": {
+                      "content": "Сообщество"
+                    },
+                    "nIczj": {
+                      "content": "Клубы, хакатоны и карьерные мероприятия для студентов."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uilLV",
+          "name": "Stats",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "XWMgQ",
+              "name": "grid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Arogt",
+                  "name": "row-1",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "k3aTIa",
+                      "type": "ref",
+                      "ref": "FPRwt",
+                      "width": "fill_container",
+                      "descendants": {
+                        "ipux9": {
+                          "content": "15+",
+                          "fontSize": 32
+                        },
+                        "ldmxt": {
+                          "content": "лет опыта"
+                        }
+                      }
+                    },
+                    {
+                      "id": "T65CLR",
+                      "type": "ref",
+                      "ref": "FPRwt",
+                      "width": "fill_container",
+                      "descendants": {
+                        "ipux9": {
+                          "content": "2 500+",
+                          "fontSize": 32
+                        },
+                        "ldmxt": {
+                          "content": "выпускников"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NutyF",
+                  "name": "row-2",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "id": "YQQ5j",
+                      "type": "ref",
+                      "ref": "FPRwt",
+                      "width": "fill_container",
+                      "descendants": {
+                        "ipux9": {
+                          "content": "40+",
+                          "fontSize": 32
+                        },
+                        "ldmxt": {
+                          "content": "партнёров"
+                        }
+                      }
+                    },
+                    {
+                      "id": "chDBt",
+                      "type": "ref",
+                      "ref": "FPRwt",
+                      "width": "fill_container",
+                      "descendants": {
+                        "ipux9": {
+                          "content": "92%",
+                          "fontSize": 32
+                        },
+                        "ldmxt": {
+                          "content": "трудоустройство"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "j2InD",
+          "name": "Events",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "VFgjQ",
+              "name": "header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "u4rn3v",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "События",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "id": "UpfnH",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "width": "fit_content",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Все события"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y1yEM",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "CH0vd",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "20 июня · 14:00"
+                    },
+                    "vOcoj": {
+                      "content": "Мастер-класс по цифровому дизайну"
+                    },
+                    "kt8XW": {
+                      "content": "Главный корпус, ауд. 204"
+                    }
+                  }
+                },
+                {
+                  "id": "FwAyf",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "28 июня · 11:00"
+                    },
+                    "vOcoj": {
+                      "content": "День открытых дверей"
+                    },
+                    "kt8XW": {
+                      "content": "Кампус на ул. Образовательная"
+                    }
+                  }
+                },
+                {
+                  "id": "jGGNb",
+                  "type": "ref",
+                  "ref": "On6eL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "X8gQ6B": {
+                      "content": "5 июля · 16:00"
+                    },
+                    "vOcoj": {
+                      "content": "Карьерная консультация"
+                    },
+                    "kt8XW": {
+                      "content": "Онлайн-формат"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BbeOf",
+          "name": "News",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "eyBuw",
+              "name": "header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "D4Rxa",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Новости",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "id": "O6jXG",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "width": "fit_content",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Все новости"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FTbKY",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "t4WSg",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "12 июня 2026"
+                    },
+                    "FjNW8": {
+                      "content": "День открытых дверей: знакомство с колледжем"
+                    },
+                    "qxsAG": {
+                      "content": "Приглашаем абитуриентов и родителей на экскурсию по кампусу."
+                    }
+                  }
+                },
+                {
+                  "id": "eDMpA",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "3 июня 2026"
+                    },
+                    "FjNW8": {
+                      "content": "Студенты заняли призовые места на хакатоне"
+                    },
+                    "qxsAG": {
+                      "content": "Команда колледжа представила проект по автоматизации учёта."
+                    }
+                  }
+                },
+                {
+                  "id": "FGCXm",
+                  "type": "ref",
+                  "ref": "BvYRh",
+                  "width": "fill_container",
+                  "descendants": {
+                    "C6Cknk": {
+                      "content": "25 мая 2026"
+                    },
+                    "FjNW8": {
+                      "content": "Открыта запись на летнюю школу"
+                    },
+                    "qxsAG": {
+                      "content": "Интенсив для абитуриентов по программированию и дизайну."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "S2jVR",
+          "name": "Licenses",
+          "width": "fill_container",
+          "fill": "$muted",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "CG5IO",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Лицензии и аккредитация",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "DlPeh",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "WjdAa",
+                  "type": "ref",
+                  "ref": "dqHRu",
+                  "width": "fill_container",
+                  "descendants": {
+                    "z9aqnO": {
+                      "content": "Лицензия на образовательную деятельность"
+                    },
+                    "k1FkDO": {
+                      "content": "Бессрочная лицензия Министерства образования."
+                    }
+                  }
+                },
+                {
+                  "id": "eEPUw",
+                  "type": "ref",
+                  "ref": "dqHRu",
+                  "width": "fill_container",
+                  "descendants": {
+                    "z9aqnO": {
+                      "content": "Свидетельство о государственной аккредитации"
+                    },
+                    "k1FkDO": {
+                      "content": "Подтверждает соответствие образовательных стандартов."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "m2uOFE",
+              "type": "ref",
+              "ref": "gbeQt",
+              "width": "fit_content",
+              "descendants": {
+                "xfpjl": {
+                  "content": "Все документы"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DqMC5",
+          "name": "FAQ",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            48,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "YQONJ",
+              "name": "header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iJF5K",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Частые вопросы",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 24,
+                  "fontWeight": "600"
+                },
+                {
+                  "id": "GpGe9",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "width": "fit_content",
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Все вопросы"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XcMln",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "id": "U0jY3w",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Какие документы нужны для поступления?",
+                      "fontSize": 15
+                    },
+                    "CMBjU": {
+                      "content": "Паспорт, аттестат, фотографии 3×4 и заявление."
+                    }
+                  }
+                },
+                {
+                  "id": "F53deg",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Можно ли поступить на бюджет?",
+                      "fontSize": 15
+                    },
+                    "CMBjU": {
+                      "content": "Да, колледж набирает на бюджетные места."
+                    }
+                  }
+                },
+                {
+                  "id": "NQAzs",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Есть ли общежитие?",
+                      "fontSize": 15
+                    },
+                    "CMBjU": {
+                      "content": "Для иногородних студентов предусмотрены места в общежитии."
+                    }
+                  }
+                },
+                {
+                  "id": "m7vvqk",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Как записаться на консультацию?",
+                      "fontSize": 15
+                    },
+                    "CMBjU": {
+                      "content": "Оставьте заявку на сайте или позвоните."
+                    }
+                  }
+                },
+                {
+                  "id": "U82RqF",
+                  "type": "ref",
+                  "ref": "q34YGF",
+                  "width": "fill_container",
+                  "descendants": {
+                    "RI38d": {
+                      "content": "Какие формы обучения доступны?",
+                      "fontSize": 15
+                    },
+                    "CMBjU": {
+                      "content": "Очная, заочная и дистанционная — в зависимости от программы."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "n4T18",
+          "type": "ref",
+          "ref": "Rg43A",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tTrVC",
+      "x": 4962,
+      "y": 0,
+      "name": "Homepage / Mobile / Menu Open",
+      "clip": true,
+      "width": 375,
+      "height": 812,
+      "fill": "$background",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Lyq50",
+          "x": 0,
+          "y": 0,
+          "name": "page-preview",
+          "width": 375,
+          "height": 812,
+          "fill": "$background",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "RhtIk",
+              "type": "ref",
+              "ref": "j4Q8oR",
+              "width": 375
+            },
+            {
+              "type": "frame",
+              "id": "L5BiR",
+              "name": "hero",
+              "width": 375,
+              "height": 280,
+              "fill": "$primary",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                48,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "quOQm",
+                  "name": "title",
+                  "fill": "$primary-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": 335,
+                  "content": "Поступай в колледж с уверенностью",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-primary",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "PiCDR",
+                  "name": "desc",
+                  "opacity": 0.85,
+                  "fill": "$primary-foreground",
+                  "textGrowth": "fixed-width",
+                  "width": 335,
+                  "content": "Современные программы, практика у партнёров...",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O1zIW",
+              "name": "content",
+              "width": 375,
+              "height": 532,
+              "fill": "$background",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                32,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ojlCT",
+                  "name": "section",
+                  "fill": "$foreground",
+                  "content": "Как поступить",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "z4UW47",
+                  "name": "card",
+                  "width": 335,
+                  "height": 100,
+                  "fill": "$card",
+                  "cornerRadius": "$radius",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner"
+                },
+                {
+                  "type": "frame",
+                  "id": "U2rjG",
+                  "name": "card-2",
+                  "width": 335,
+                  "height": 100,
+                  "fill": "$card",
+                  "cornerRadius": "$radius",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MBL3e",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 375,
+          "height": 812,
+          "fill": "#00000059"
+        },
+        {
+          "id": "zxoCD",
+          "type": "ref",
+          "ref": "l3cM4",
+          "x": 55,
+          "y": 0,
+          "height": 812
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MEK4X",
+      "x": -1999,
+      "y": 6221,
+      "name": "Programs / Desktop / Light",
+      "clip": true,
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "IHIQH",
+          "type": "ref",
+          "ref": "JV11q",
+          "width": "fill_container"
+        },
+        {
+          "id": "V6Hxl",
+          "type": "ref",
+          "ref": "B2iDqY",
+          "width": "fill_container",
+          "descendants": {
+            "k9iFbb": {
+              "content": "Каталог программ"
+            },
+            "f8col": {
+              "content": "Выберите программу обучения по интересующим параметрам"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "VeSyl",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "qZSgf",
+              "name": "tabs",
+              "fill": "$muted",
+              "cornerRadius": 10,
+              "gap": 4,
+              "padding": 4,
+              "children": [
+                {
+                  "id": "NsxyF",
+                  "type": "ref",
+                  "ref": "Q1Aha",
+                  "descendants": {
+                    "Ij2Lk": {
+                      "content": "Все"
+                    }
+                  }
+                },
+                {
+                  "id": "a0utvC",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "СПО"
+                    }
+                  }
+                },
+                {
+                  "id": "T3SNg",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "Курсы"
+                    }
+                  }
+                },
+                {
+                  "id": "mMGcQ",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "ВО"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zqssa",
+              "name": "filters",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "Zbau0",
+                  "type": "ref",
+                  "ref": "OMeGa",
+                  "descendants": {
+                    "Ovkpx": {
+                      "content": "Любая база"
+                    }
+                  }
+                },
+                {
+                  "id": "m8qCi",
+                  "type": "ref",
+                  "ref": "thjwY",
+                  "descendants": {
+                    "SA5Fn": {
+                      "content": "После 9 класса"
+                    }
+                  }
+                },
+                {
+                  "id": "UVfmh",
+                  "type": "ref",
+                  "ref": "thjwY",
+                  "descendants": {
+                    "SA5Fn": {
+                      "content": "После 11 класса"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g2Y9Kw",
+              "name": "grid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "m6BdfV",
+                  "name": "row-1",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "kK3fz",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Программирование и ИТ"
+                        },
+                        "HVBOR": {
+                          "content": "Современная программа с практикой на реальных проектах."
+                        },
+                        "xcDNq": {
+                          "content": "3 года 10 мес · от 85 000 ₽"
+                        }
+                      }
+                    },
+                    {
+                      "id": "qt0HL",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Дизайн и медиакоммуникации"
+                        },
+                        "HVBOR": {
+                          "content": "Освоите графику, UX и работу с брендами."
+                        },
+                        "xcDNq": {
+                          "content": "2 года 10 мес · от 72 000 ₽"
+                        }
+                      }
+                    },
+                    {
+                      "id": "UEzxb",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Экономика и бухгалтерский учёт"
+                        },
+                        "HVBOR": {
+                          "content": "Подготовка к работе в финансовых службах."
+                        },
+                        "xcDNq": {
+                          "content": "2 года 10 мес · от 68 000 ₽"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uQ1Fz",
+                  "name": "row-2",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "iQ4WO",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Юриспруденция"
+                        },
+                        "HVBOR": {
+                          "content": "Базовая подготовка для работы в правовой сфере."
+                        },
+                        "xcDNq": {
+                          "content": "2 года 10 мес · от 70 000 ₽"
+                        }
+                      }
+                    },
+                    {
+                      "id": "U3Ys4",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Туризм и гостеприимство"
+                        },
+                        "HVBOR": {
+                          "content": "Международные стандарты сервиса."
+                        },
+                        "xcDNq": {
+                          "content": "1 год 10 мес · от 60 000 ₽"
+                        }
+                      }
+                    },
+                    {
+                      "id": "PmR0J",
+                      "type": "ref",
+                      "ref": "utJZg",
+                      "width": "fill_container",
+                      "descendants": {
+                        "r1gwiN": {
+                          "content": "Педагогика дошкольного образования"
+                        },
+                        "HVBOR": {
+                          "content": "Подготовка воспитателей и методистов."
+                        },
+                        "xcDNq": {
+                          "content": "3 года 10 мес · от 65 000 ₽"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ED2ak",
+              "type": "ref",
+              "ref": "aH5DK"
+            }
+          ]
+        },
+        {
+          "id": "UNALf",
+          "type": "ref",
+          "ref": "ghXni",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iVx3k",
+      "x": 3719,
+      "y": 0,
+      "name": "Programs / Mobile / Light",
+      "clip": true,
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "RRr86",
+          "type": "ref",
+          "ref": "j4Q8oR",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "Nh0mR",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "DDtDS",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Каталог программ",
+              "fontFamily": "$font-primary",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "lCknI",
+              "name": "subtitle",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Выберите программу по интересующим параметрам",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zHngP",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            24,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "L3S9t",
+              "name": "tabs",
+              "width": "fill_container",
+              "fill": "$muted",
+              "cornerRadius": 10,
+              "gap": 4,
+              "padding": 4,
+              "children": [
+                {
+                  "id": "L7h8n9",
+                  "type": "ref",
+                  "ref": "Q1Aha",
+                  "width": "fill_container",
+                  "descendants": {
+                    "Ij2Lk": {
+                      "content": "Все",
+                      "fontSize": 12
+                    }
+                  }
+                },
+                {
+                  "id": "l7jIg2",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "width": "fill_container",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "СПО",
+                      "fontSize": 12
+                    }
+                  }
+                },
+                {
+                  "id": "R7HWm",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "width": "fill_container",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "Курсы",
+                      "fontSize": 12
+                    }
+                  }
+                },
+                {
+                  "id": "dOZ8G",
+                  "type": "ref",
+                  "ref": "oB48F",
+                  "width": "fill_container",
+                  "descendants": {
+                    "OXsX0": {
+                      "content": "ВО",
+                      "fontSize": 12
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g5iV9m",
+              "name": "filters",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uianM",
+                  "name": "row",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "id": "GoATl",
+                      "type": "ref",
+                      "ref": "OMeGa",
+                      "descendants": {
+                        "Ovkpx": {
+                          "content": "Любая база"
+                        }
+                      }
+                    },
+                    {
+                      "id": "u2LbaB",
+                      "type": "ref",
+                      "ref": "thjwY",
+                      "descendants": {
+                        "SA5Fn": {
+                          "content": "После 9 класса"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "FrYmw",
+                  "type": "ref",
+                  "ref": "thjwY",
+                  "width": "fit_content",
+                  "descendants": {
+                    "SA5Fn": {
+                      "content": "После 11 класса"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ih885",
+              "name": "list",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "tczk2",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Программирование и ИТ"
+                    },
+                    "HVBOR": {
+                      "content": "Современная программа с практикой на реальных проектах."
+                    },
+                    "xcDNq": {
+                      "content": "3 года 10 мес · от 85 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "X16V2g",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Дизайн и медиакоммуникации"
+                    },
+                    "HVBOR": {
+                      "content": "Освоите графику, UX и работу с брендами."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 72 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "z2LNyj",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Экономика и бухгалтерский учёт"
+                    },
+                    "HVBOR": {
+                      "content": "Подготовка к работе в финансовых службах."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 68 000 ₽"
+                    }
+                  }
+                },
+                {
+                  "id": "Lzvei",
+                  "type": "ref",
+                  "ref": "utJZg",
+                  "width": "fill_container",
+                  "descendants": {
+                    "r1gwiN": {
+                      "content": "Юриспруденция"
+                    },
+                    "HVBOR": {
+                      "content": "Базовая подготовка для работы в правовой сфере."
+                    },
+                    "xcDNq": {
+                      "content": "2 года 10 мес · от 70 000 ₽"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E6rP8B",
+              "name": "pagination",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "YNxqm",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "height": 32,
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Назад",
+                      "fontSize": 12
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "xOspA",
+                  "name": "page",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "$primary",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VIv8y",
+                      "name": "label",
+                      "fill": "$primary-foreground",
+                      "content": "1",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "id": "N0u8zD",
+                  "type": "ref",
+                  "ref": "gbeQt",
+                  "height": 32,
+                  "descendants": {
+                    "xfpjl": {
+                      "content": "Далее",
+                      "fontSize": 12
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CwwHE",
+          "type": "ref",
+          "ref": "Rg43A",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "edbb4",
+      "x": -449,
+      "y": 6221,
+      "name": "FAQ / Desktop / Light",
+      "clip": true,
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "xi1Gp",
+          "type": "ref",
+          "ref": "JV11q",
+          "width": "fill_container"
+        },
+        {
+          "id": "Moz3S",
+          "type": "ref",
+          "ref": "B2iDqY",
+          "width": "fill_container",
+          "descendants": {
+            "k9iFbb": {
+              "content": "Часто задаваемые вопросы"
+            },
+            "f8col": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "u7Bgm",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "O8K0u",
+              "name": "section-Поступление",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nRg26",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Поступление",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "xjykO",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "K55Wl",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Какие документы нужны для поступления?"
+                        },
+                        "FrZNu": {
+                          "content": "Паспорт, аттестат, фотографии 3×4 и заявление. Полный список — в разделе «Документы»."
+                        }
+                      }
+                    },
+                    {
+                      "id": "vXbac",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Можно ли поступить на бюджет?"
+                        }
+                      }
+                    },
+                    {
+                      "id": "r7zQKo",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Когда начинается приём документов?"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MWBct",
+              "name": "section-Обучение",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BmaWa",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Обучение",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "Es5cL",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "MgV13",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Какие формы обучения доступны?"
+                        },
+                        "FrZNu": {
+                          "content": "Очная, заочная и дистанционная — в зависимости от программы."
+                        }
+                      }
+                    },
+                    {
+                      "id": "H9xkHo",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Есть ли практика и стажировки?"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E3TLcb",
+              "name": "section-Оплата",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LjBAS",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Оплата",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "j6gnt",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "lCkzP",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Сколько стоит обучение?"
+                        },
+                        "FrZNu": {
+                          "content": "Стоимость зависит от программы. Актуальные цены — в карточке каждой программы."
+                        }
+                      }
+                    },
+                    {
+                      "id": "fGRzV",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Можно ли оплатить в рассрочку?"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JM3eX",
+          "type": "ref",
+          "ref": "ghXni",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "am50j",
+      "x": 4290,
+      "y": 0,
+      "name": "FAQ / Mobile / Light",
+      "clip": true,
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "jaOb6",
+          "type": "ref",
+          "ref": "j4Q8oR",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "iCni8",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "vUUmT",
+              "name": "title",
+              "fill": "$foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Часто задаваемые вопросы",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r73iE",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            24,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ifGSH",
+              "name": "section-Поступление",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "g0IA8j",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Поступление",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "nJpoO",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "ubHH7",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Какие документы нужны для поступления?",
+                          "fontSize": 14
+                        },
+                        "FrZNu": {
+                          "content": "Паспорт, аттестат, фотографии 3×4 и заявление.",
+                          "fontSize": 13
+                        }
+                      }
+                    },
+                    {
+                      "id": "Qi2Hw",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Можно ли поступить на бюджет?",
+                          "fontSize": 14
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZrThN",
+              "name": "section-Обучение",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AYgvG",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Обучение",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "BO4Uu",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "nuJKz",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Какие формы обучения доступны?",
+                          "fontSize": 14
+                        },
+                        "FrZNu": {
+                          "content": "Очная, заочная и дистанционная.",
+                          "fontSize": 13
+                        }
+                      }
+                    },
+                    {
+                      "id": "A4xNN",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Есть ли практика?",
+                          "fontSize": 14
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v6v0Tm",
+              "name": "section-Оплата",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "av4HO",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Оплата",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "jeLlN",
+                  "name": "list",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "b1kkE",
+                      "type": "ref",
+                      "ref": "lsMG7",
+                      "width": "fill_container",
+                      "descendants": {
+                        "hgEk9": {
+                          "content": "Сколько стоит обучение?",
+                          "fontSize": 14
+                        },
+                        "FrZNu": {
+                          "content": "Стоимость указана в карточке программы.",
+                          "fontSize": 13
+                        }
+                      }
+                    },
+                    {
+                      "id": "yr4nm",
+                      "type": "ref",
+                      "ref": "sOXpS",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JDLUj": {
+                          "content": "Есть рассрочка?",
+                          "fontSize": 14
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CimcD",
+          "type": "ref",
+          "ref": "Rg43A",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "OFyq3",
+      "x": 1156,
+      "y": 6221,
+      "name": "Contacts / Desktop / Light",
+      "clip": true,
+      "width": 1440,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "QyIhQ",
+          "type": "ref",
+          "ref": "JV11q",
+          "width": "fill_container"
+        },
+        {
+          "id": "g6ZW2",
+          "type": "ref",
+          "ref": "B2iDqY",
+          "width": "fill_container",
+          "descendants": {
+            "k9iFbb": {
+              "content": "Контакты"
+            },
+            "f8col": {
+              "content": "Свяжитесь с приёмной комиссией или посетите один из кампусов колледжа"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "txANN",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "SLPUM",
+              "name": "general",
+              "width": "fill_container",
+              "fill": "$muted",
+              "cornerRadius": "$radius",
+              "gap": 24,
+              "padding": 32,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VvEeP",
+                  "name": "info",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TuAV6",
+                      "name": "title",
+                      "fill": "$foreground",
+                      "content": "Приёмная комиссия",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zu3yB",
+                      "name": "hours",
+                      "fill": "$muted-foreground",
+                      "content": "Пн–Пт: 9:00–18:00, Сб: 10:00–14:00",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FVTjE",
+                      "name": "phone",
+                      "fill": "$foreground",
+                      "content": "+7 (495) 123-45-67",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zycMQ",
+                      "name": "email",
+                      "fill": "$foreground",
+                      "content": "info@college.ru",
+                      "fontFamily": "$font-secondary",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "id": "X4yCw",
+                  "type": "ref",
+                  "ref": "M95MvL",
+                  "descendants": {
+                    "Ttjf9": {
+                      "content": "Оставить заявку"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "gjssG",
+              "name": "campuses-title",
+              "fill": "$foreground",
+              "content": "Кампусы",
+              "fontFamily": "$font-primary",
+              "fontSize": 24,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "ASl1d",
+              "name": "campuses",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "id": "W9lrMZ",
+                  "type": "ref",
+                  "ref": "s3IcWI",
+                  "width": "fill_container",
+                  "descendants": {
+                    "i3deTX": {
+                      "content": "Москва"
+                    },
+                    "KK7tJ": {
+                      "content": "Главный кампус"
+                    },
+                    "O9sAp1": {
+                      "content": "ул. Образовательная, д. 12, корп. 1"
+                    },
+                    "wTx2F": {
+                      "content": "м. Университет, 5 мин пешком"
+                    },
+                    "rSmAb": {
+                      "content": "+7 (495) 123-45-67"
+                    },
+                    "dTd45": {
+                      "content": "Пн–Пт: 8:00–20:00"
+                    }
+                  }
+                },
+                {
+                  "id": "TstKK",
+                  "type": "ref",
+                  "ref": "s3IcWI",
+                  "width": "fill_container",
+                  "descendants": {
+                    "i3deTX": {
+                      "content": "Московская область"
+                    },
+                    "KK7tJ": {
+                      "content": "Кампус «Южный»"
+                    },
+                    "O9sAp1": {
+                      "content": "г. Подольск, ул. Ленина, д. 45"
+                    },
+                    "wTx2F": {
+                      "content": "15 мин от ж/д станции"
+                    },
+                    "rSmAb": {
+                      "content": "+7 (496) 777-88-99"
+                    },
+                    "dTd45": {
+                      "content": "Пн–Пт: 9:00–18:00"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p50Ju",
+          "type": "ref",
+          "ref": "ghXni",
+          "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "b7sVa",
+      "x": 2715,
+      "y": 6221,
+      "name": "Contacts / Mobile / Light",
+      "clip": true,
+      "width": 375,
+      "fill": "$background",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "NQcbQ",
+          "type": "ref",
+          "ref": "j4Q8oR",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "ENZU5",
+          "name": "hero",
+          "width": "fill_container",
+          "fill": "$muted",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "u0C5t",
+              "name": "title",
+              "fill": "$foreground",
+              "content": "Контакты",
+              "fontFamily": "$font-primary",
+              "fontSize": 26,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "AqTH0",
+              "name": "subtitle",
+              "fill": "$muted-foreground",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Свяжитесь с приёмной комиссией или посетите кампус",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-secondary",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rr9NG",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "unHTL",
+              "name": "general",
+              "width": "fill_container",
+              "fill": "$muted",
+              "cornerRadius": "$radius",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OH8Ro",
+                  "name": "title",
+                  "fill": "$foreground",
+                  "content": "Приёмная комиссия",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "dGosE",
+                  "name": "hours",
+                  "fill": "$muted-foreground",
+                  "content": "Пн–Пт: 9:00–18:00, Сб: 10:00–14:00",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "EZsh7",
+                  "name": "phone",
+                  "fill": "$foreground",
+                  "content": "+7 (495) 123-45-67",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "z3JgC",
+                  "name": "email",
+                  "fill": "$foreground",
+                  "content": "info@college.ru",
+                  "fontFamily": "$font-secondary",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "id": "HcCHS",
+                  "type": "ref",
+                  "ref": "M95MvL",
+                  "width": "fill_container",
+                  "descendants": {
+                    "Ttjf9": {
+                      "content": "Оставить заявку"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "UthUx",
+              "name": "campuses-title",
+              "fill": "$foreground",
+              "content": "Кампусы",
+              "fontFamily": "$font-primary",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "yNcmv",
+              "name": "campuses",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "id": "yV7gA",
+                  "type": "ref",
+                  "ref": "s3IcWI",
+                  "width": "fill_container",
+                  "descendants": {
+                    "i3deTX": {
+                      "content": "Москва"
+                    },
+                    "KK7tJ": {
+                      "content": "Главный кампус"
+                    },
+                    "O9sAp1": {
+                      "content": "ул. Образовательная, д. 12, корп. 1"
+                    },
+                    "wTx2F": {
+                      "content": "м. Университет"
+                    },
+                    "rSmAb": {
+                      "content": "+7 (495) 123-45-67"
+                    },
+                    "dTd45": {
+                      "content": "Пн–Пт: 8:00–20:00"
+                    }
+                  }
+                },
+                {
+                  "id": "RYTXt",
+                  "type": "ref",
+                  "ref": "s3IcWI",
+                  "width": "fill_container",
+                  "descendants": {
+                    "i3deTX": {
+                      "content": "Московская область"
+                    },
+                    "KK7tJ": {
+                      "content": "Кампус «Южный»"
+                    },
+                    "O9sAp1": {
+                      "content": "г. Подольск, ул. Ленина, д. 45"
+                    },
+                    "wTx2F": {
+                      "content": "15 мин от ж/д станции"
+                    },
+                    "rSmAb": {
+                      "content": "+7 (496) 777-88-99"
+                    },
+                    "dTd45": {
+                      "content": "Пн–Пт: 9:00–18:00"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "EVoJt",
+          "type": "ref",
+          "ref": "Rg43A",
+          "width": "fill_container"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "border": {
+      "type": "color",
+      "value": "#E4E4E7"
+    },
+    "card": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "card-foreground": {
+      "type": "color",
+      "value": "#18181B"
+    },
+    "container-width": {
+      "type": "number",
+      "value": 1200
+    },
+    "destructive": {
+      "type": "color",
+      "value": "#DC2626"
+    },
+    "font-primary": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-secondary": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "foreground": {
+      "type": "color",
+      "value": "#18181B"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#F4F4F5"
+    },
+    "muted-foreground": {
+      "type": "color",
+      "value": "#71717A"
+    },
+    "primary": {
+      "type": "color",
+      "value": "#2F8F63"
+    },
+    "primary-foreground": {
+      "type": "color",
+      "value": "#F0FDF4"
+    },
+    "radius": {
+      "type": "number",
+      "value": 10
+    },
+    "radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "secondary": {
+      "type": "color",
+      "value": "#F4F4F5"
+    },
+    "secondary-foreground": {
+      "type": "color",
+      "value": "#27272A"
+    },
+    "section-gap": {
+      "type": "number",
+      "value": 48
+    },
+    "section-padding-y": {
+      "type": "number",
+      "value": 80
+    }
+  }
+}

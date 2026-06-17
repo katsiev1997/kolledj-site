@@ -1,18 +1,32 @@
-import React from 'react'
+import type { Metadata } from 'next'
+import { Toaster } from '@/components/ui/sonner'
+
+import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/components/layout/Header'
+import { getSiteSettings } from '@/lib/payload/queries'
+import { buildPageMetadata } from '@/lib/metadata'
+
 import './styles.css'
 
-export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSiteSettings()
+  return buildPageMetadata(
+    settings.organizationName,
+    settings.meta,
+    settings.organizationShortName || settings.organizationName,
+  )
 }
 
-export default async function RootLayout(props: { children: React.ReactNode }) {
-  const { children } = props
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings = await getSiteSettings()
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="ru">
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <Header settings={settings} />
         <main>{children}</main>
+        <Footer settings={settings} />
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   )
