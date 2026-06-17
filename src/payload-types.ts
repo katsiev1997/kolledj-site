@@ -486,7 +486,37 @@ export interface Page {
   generateSlug?: boolean | null;
   slug: string;
   template?: ('about' | 'privacy' | 'generic') | null;
-  content: {
+  subtitle?: string | null;
+  intro?: string | null;
+  stats?:
+    | {
+        value: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  valuesTitle?: string | null;
+  values?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  history?: {
+    title?: string | null;
+    paragraphs?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  cta?: {
+    programsLabel?: string | null;
+    contactsLabel?: string | null;
+  };
+  content?: {
     root: {
       type: string;
       children: {
@@ -500,7 +530,7 @@ export interface Page {
       version: number;
     };
     [k: string]: unknown;
-  };
+  } | null;
   meta?: {
     title?: string | null;
     description?: string | null;
@@ -1011,6 +1041,40 @@ export interface PagesSelect<T extends boolean = true> {
   generateSlug?: T;
   slug?: T;
   template?: T;
+  subtitle?: T;
+  intro?: T;
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  valuesTitle?: T;
+  values?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  history?:
+    | T
+    | {
+        title?: T;
+        paragraphs?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+      };
+  cta?:
+    | T
+    | {
+        programsLabel?: T;
+        contactsLabel?: T;
+      };
   content?: T;
   meta?:
     | T

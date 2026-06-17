@@ -28,7 +28,7 @@ export const revalidateFrontendCollection: CollectionAfterChangeHook = ({ doc, c
       revalidatePaths(['/', '/news', ...(slug ? [`/news/${slug}`] : [])])
       break
     case 'pages':
-      revalidatePaths(['/', ...(slug ? [`/pages/${slug}`] : [])])
+      revalidatePaths(['/', '/about', ...(slug && slug !== 'about' ? [`/pages/${slug}`] : [])])
       break
     case 'faq':
       revalidatePaths(['/', '/faq'])

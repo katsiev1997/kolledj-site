@@ -6,7 +6,7 @@ import sharp from 'sharp'
 
 import config from '../src/payload.config.js'
 import { clearContent, ensureAdminUser } from './seed/clear.js'
-import { FAQ_SEED, pick, pickMany, PROGRAM_TITLES, richText, slugify } from './seed/utils.js'
+import { ABOUT_PAGE_SEED, FAQ_SEED, pick, pickMany, PROGRAM_TITLES, richText, slugify } from './seed/utils.js'
 
 const ADMIN_EMAIL = process.env.SEED_ADMIN_EMAIL || 'admin@college.local'
 const ADMIN_PASSWORD = process.env.SEED_ADMIN_PASSWORD || 'admin123'
@@ -233,18 +233,7 @@ async function seed() {
   console.log('Создание страниц...')
   const aboutPage = await payload.create({
     collection: 'pages',
-    data: {
-      title: 'О колледже',
-      slug: 'about',
-      template: 'about',
-      excerpt:
-        'Мы готовим специалистов, которые уверенно начинают карьеру. Сильная практика, наставники из индустрии и современная инфраструктура.',
-      ctaText: 'Подробнее о колледже',
-      content: richText(
-        'Государственный колледж информационных технологий — это современная образовательная площадка с акцентом на практику, проектное обучение и сопровождение студентов от поступления до трудоустройства.',
-      ),
-      published: true,
-    },
+    data: ABOUT_PAGE_SEED,
   })
 
   const privacyPage = await payload.create({
@@ -402,6 +391,8 @@ async function seed() {
   console.log('')
   console.log(`Админ: ${ADMIN_EMAIL} / ${ADMIN_PASSWORD}`)
   console.log('Запуск: pnpm dev → http://localhost:3000/admin')
+
+  process.exit(0)
 }
 
 seed().catch((error) => {

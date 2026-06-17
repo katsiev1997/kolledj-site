@@ -78,7 +78,7 @@ export function AboutTeaser({
           {excerpt ? <p className="text-sm leading-relaxed text-muted-foreground md:text-base">{excerpt}</p> : null}
         </div>
         <Button asChild className="w-full md:w-auto">
-          <Link href="/pages/about">{ctaText}</Link>
+          <Link href="/about">{ctaText}</Link>
         </Button>
       </Container>
     </section>

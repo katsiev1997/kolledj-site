@@ -3,7 +3,6 @@ export const INFO_BASE = '/info' as const
 export const MAIN_NAV = [
   { label: 'Каталог', href: '/programs' },
   { label: 'Новости', href: '/news' },
-  { label: 'Партнёры', href: '/partners' },
   { label: 'О колледже', href: '/about' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Сведения об организации', href: INFO_BASE },
